@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b9a4e61.css",
-    "main.js": "/static/js/main.8dbaa842.js",
-    "static/css/764.972f3125.chunk.css": "/static/css/764.972f3125.chunk.css",
-    "static/js/764.5550ed74.chunk.js": "/static/js/764.5550ed74.chunk.js",
-    "static/js/453.137c2945.chunk.js": "/static/js/453.137c2945.chunk.js",
-    "static/media/front.png": "/static/media/front.9ebc4cfcf0791ea0b612.png",
-    "static/media/otherground2.jpg": "/static/media/otherground2.a96432475f12c95de4c4.jpg",
-    "static/media/background_section1.png": "/static/media/background_section1.e76face03c286a3b9c3b.png",
-    "static/media/news-paper.png": "/static/media/news-paper.48d4dfe2a622b938d3a3.png",
-    "static/media/lighter.png": "/static/media/lighter.8e1c77026302d7d8cfb1.png",
-    "index.html": "/index.html",
-    "main.2b9a4e61.css.map": "/static/css/main.2b9a4e61.css.map",
-    "main.8dbaa842.js.map": "/static/js/main.8dbaa842.js.map",
-    "764.972f3125.chunk.css.map": "/static/css/764.972f3125.chunk.css.map",
-    "764.5550ed74.chunk.js.map": "/static/js/764.5550ed74.chunk.js.map",
-    "453.137c2945.chunk.js.map": "/static/js/453.137c2945.chunk.js.map"
+    "main.css": "/light-of-the-day/static/css/main.314d44d0.css",
+    "main.js": "/light-of-the-day/static/js/main.fe71688a.js",
+    "static/css/764.972f3125.chunk.css": "/light-of-the-day/static/css/764.972f3125.chunk.css",
+    "static/js/764.5550ed74.chunk.js": "/light-of-the-day/static/js/764.5550ed74.chunk.js",
+    "static/js/453.137c2945.chunk.js": "/light-of-the-day/static/js/453.137c2945.chunk.js",
+    "static/media/front.png": "/light-of-the-day/static/media/front.9ebc4cfcf0791ea0b612.png",
+    "static/media/otherground2.jpg": "/light-of-the-day/static/media/otherground2.a96432475f12c95de4c4.jpg",
+    "static/media/background_section1.png": "/light-of-the-day/static/media/background_section1.e76face03c286a3b9c3b.png",
+    "static/media/news-paper.png": "/light-of-the-day/static/media/news-paper.48d4dfe2a622b938d3a3.png",
+    "static/media/lighter.png": "/light-of-the-day/static/media/lighter.8e1c77026302d7d8cfb1.png",
+    "index.html": "/light-of-the-day/index.html",
+    "main.314d44d0.css.map": "/light-of-the-day/static/css/main.314d44d0.css.map",
+    "main.fe71688a.js.map": "/light-of-the-day/static/js/main.fe71688a.js.map",
+    "764.972f3125.chunk.css.map": "/light-of-the-day/static/css/764.972f3125.chunk.css.map",
+    "764.5550ed74.chunk.js.map": "/light-of-the-day/static/js/764.5550ed74.chunk.js.map",
+    "453.137c2945.chunk.js.map": "/light-of-the-day/static/js/453.137c2945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b9a4e61.css",
-    "static/js/main.8dbaa842.js"
+    "static/css/main.314d44d0.css",
+    "static/js/main.fe71688a.js"
   ]
 }
