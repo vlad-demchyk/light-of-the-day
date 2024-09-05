@@ -1,0 +1,51 @@
+.paragraph_sec_one{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    color: #E5E5E5;
+    width: 316px;
+    /* min-width: 316px; */
+    height: 80px;
+    top: 40%;
+    left: 37%;
+    margin: 0;
+}
+
+
+@media screen and (min-width: 2000px) {
+
+}
+  @media screen and (max-width: 1600px) {
+
+  }
+    @media screen and (max-width: 1200px) {
+
+    }
+      @media screen and (max-width: 768px) {
+        .paragraph_sec_one{
+            right: 5%;
+            left: auto;
+            display: block;
+            width: 70% !important;
+            top: 50%;
+            font-size: 1.2rem;
+            width: 450px;
+            text-align: end;
+        }
+     
+      }
+  
+      @media screen and (max-width: 450px) {
+        .paragraph_sec_one{
+            right: 5%;
+            left: auto;
+            display: block;
+            width: 75% !important;
+            top: 50%;
+            font-size: 1.2rem;
+            width: 450px;
+            text-align: end;
+        }
+     
+      }
+  

@@ -1,0 +1,19 @@
+.section_1 {
+  background-image: url("../background/background_section1.png"),
+    /* Нижнє зображення */
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../background/front.png"); /* Верхнє зображення */
+  background-position: center center, center center; /* Позиції для обох зображень */
+  background-size: cover, cover; /* Обидва зображення покривають контейнер */
+  background-repeat: no-repeat, no-repeat; /* Обидва зображення не повторюються */
+  background-color: #000000; /* Чорний фон на випадок, якщо зображення не завантажаться */
+
+  height: 1074px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  z-index: 2;
+}
+

@@ -1,0 +1,60 @@
+.header {
+    height: 78px;
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 5%;
+    /* position: fixed; */
+}
+.logo-luce {
+    width: 126px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+
+}
+.logo-luce img {
+    width: 126px;
+    height: 50px;
+    position: absolute;
+
+}
+
+.navigation {
+    margin: 0;
+    right: 70px;
+}
+
+.navigation a {
+    color: #E5E5E5;
+    margin-left: 95px;
+    align-items: end;
+    height: 26px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.navigation a:hover {
+    color: #F44C06;
+}
+
+@media screen and (min-width: 2000px) {
+
+}
+  @media screen and (max-width: 1600px) {
+
+  }
+    @media screen and (max-width: 1200px) {
+
+    }
+      @media screen and (max-width: 768px) {
+        .logo-luce img {
+            width: 100px;
+            height: auto;
+            position: absolute;
+        
+        }
+      }
+  

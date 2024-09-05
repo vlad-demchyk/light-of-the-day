@@ -1,0 +1,185 @@
+.section_2{
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.766)),
+    url("../background/otherground2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative;
+    width: 100%;
+    height: 7000px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+.achievements{
+position: absolute;
+display: grid;
+grid-template-rows: min-content max-content;
+gap: 50px;
+width: 1133px;
+right: 5%;
+top: 5%;
+}
+
+.description{
+position: relative;
+}
+
+.description p{
+display: inline-block;
+margin: 0;
+}
+
+.description p:nth-child(1){
+    font-family: 'Georama', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #CCCCCC;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+.description p:nth-child(2){
+    font-family: 'Georama', sans-serif;
+    font-size: 4.25em;
+    font-weight: 100;
+    color: #CCCCCC;
+    line-height: 1;
+    letter-spacing: -3px;
+    text-indent: 15%;
+    position: relative;
+    text-align: justify;
+    width: 99%;
+}
+.description p:nth-child(3){
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #E5E5E5;
+    text-align: right;
+    width: 319px;
+    height: 36px;
+    position: absolute;
+    bottom: 9px;
+    right: 11px;
+}
+
+
+
+.counter{
+display: flex;
+/* gap: 120px; */
+justify-content: space-between;
+align-items: center;
+}
+
+.counter div{
+display: grid;
+grid-template-rows: min-content min-content;
+}
+
+.counter div p:first-of-type{
+    font-size: 6.875rem;
+    font-weight: 700;
+    font-family: "georama"sans-serif;
+    color: #E5E5E5;
+    letter-spacing: -3px;
+    text-align: center;
+    display: inline;
+    margin: 0;
+
+}
+
+.counter div p:nth-of-type(2){
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-family: "Montserrat"sans-serif;
+    color: #E5E5E5;
+    text-align: center;
+    display: inline;
+    margin: 0;
+
+
+}
+
+/* .main{
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 100%
+  } */
+  
+  @media screen and (min-width: 2000px) {
+
+  }
+    @media screen and (max-width: 1600px) {
+
+    }
+      @media screen and (max-width: 1200px) {
+
+      }
+        @media screen and (max-width: 768px) {
+
+            .achievements{
+                left: 50%;
+                transform: translate(-50%, -50%); /* Зміщує елемент по центру */
+                width: 90%;
+                grid-template-rows: max-content;
+            }
+        
+            .description p:nth-child(1){
+                display: none;
+            }
+            .description p:nth-child(3){
+                display: none;
+            }
+            .description p:nth-child(2){
+            font-size: 2.3em;
+            letter-spacing: normal;
+            /* text-align:start; */
+            display: block;
+
+            }
+
+            .counter div p:nth-of-type(1){
+                font-size: 4em;
+            }
+            .counter div p:nth-of-type(2){
+                font-weight: 200;
+            }
+        }
+    
+        @media screen and (max-width: 450px) {
+
+            .achievements{
+                left: 50%;
+                top: 3.5%;
+                transform: translate(-50%, -50%); /* Зміщує елемент по центру */
+                width: 90%;
+                grid-template-rows: max-content;
+            }
+        
+            .description p:nth-child(1){
+                display: none;
+            }
+            .description p:nth-child(3){
+                display: none;
+            }
+            .description p:nth-child(2){
+            font-size: 1.4em;
+            letter-spacing: normal;
+            text-align:start;
+            display: block;
+
+            }
+
+            .counter div p:nth-of-type(1){
+                font-size: 2.5em;
+            }
+            .counter div p:nth-of-type(2){
+                font-size: 0.9em;
+                font-weight: 200;
+            }
+        }
+    

@@ -1,0 +1,111 @@
+
+.lighter_Container {
+    width: 100%;
+    height: 814px;
+    position: absolute;
+    /* position: relative; */
+    z-index: 2;
+    top: 11%;
+    box-sizing: border-box;
+
+} 
+
+.lighter_img {
+    width: 430px;
+    height: 513px;
+    position: relative;
+    left: 0;
+    top: 0;
+    /* z-index: -1; */
+}
+
+.sub_main_text,
+.sub_main_text2 {
+    color: #F44C06;
+    font-weight: 900;
+    font-size: 10em;
+    font-family: "Georama", sans-serif;
+    font-style: normal;
+    margin: 0;
+    /* min-width: 1318px; */
+    /* max-width: 1300px; */
+    line-height: 1;
+}
+
+.sub_main_text {
+    position: absolute;
+    bottom: 25%;
+    /* min-width: 1419px; */
+    left: 5%
+}
+
+.sub_main_text2 {
+    position: absolute;
+    /* min-width: 853px; */
+    bottom: 0%;
+    right: 5%;
+}
+
+@media screen and (min-width: 2000px) {
+
+}
+  @media screen and (max-width: 1600px) {
+
+  }
+    @media screen and (max-width: 1200px) {
+
+    }
+      @media screen and (max-width: 768px) {
+     
+        .lighter_Container {
+            top: 9%;
+            height: max-content;
+        }
+        
+        .lighter_img {
+            height: 300px;
+            width: auto;
+            left: 2%;
+        }
+
+        .sub_main_text,
+        .sub_main_text2 {
+            font-size: 4.6em;
+            font-weight: 700;
+        }
+
+        .sub_main_text{
+position: relative;
+        }
+        .sub_main_text2{
+            position: relative;
+            float: right;
+        }
+      }
+      @media screen and (max-width: 450px) {
+     
+        .lighter_Container {
+            top: 7%;
+            height: max-content;
+        }
+        
+        .lighter_img {
+            height: 250px;
+            width: auto;
+            left: 2%;
+        }
+
+        .sub_main_text,
+        .sub_main_text2 {
+            font-size: 3.2em;
+            font-weight: 700;
+        }
+
+        .sub_main_text{
+position: relative;
+        }
+        .sub_main_text2{
+            position: relative;
+            float: right;
+        }
+      }

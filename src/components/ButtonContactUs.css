@@ -1,0 +1,74 @@
+/* Контейнер для кола */
+.circle-container {
+    position: absolute;
+    width: 155px;
+    text-decoration: none;
+}
+
+/* SVG текст по колу */
+.circle-text {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.circle-container:hover .circle-text{
+    animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Початкова точка обертання */
+    }
+    to {
+      transform: rotate(360deg); /* Кінцева точка обертання */
+    }
+  }
+
+
+/* Текст по колу */
+text {
+    font-family: 'Georama', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    fill: white; /* Колір тексту */
+    letter-spacing: 2px;
+}
+
+
+/* Центрування елемента в середині кола */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 1; */
+}
+
+/* Стилізація стрілки */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 30px solid #F44C06; /* Колір стрілки */
+    transform: rotate(-45deg); /* Поворот стрілки */
+}
+
+@media screen and (min-width: 2000px) {
+
+}
+  @media screen and (max-width: 1600px) {
+
+  }
+    @media screen and (max-width: 1200px) {
+
+    }
+      @media screen and (max-width: 768px) {
+        .circle-container {
+           left: 5%;
+           margin-top: 30%;
+        }
+      }
+  

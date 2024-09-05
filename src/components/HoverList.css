@@ -1,0 +1,151 @@
+.list{
+display: flex;
+position: absolute;
+/* margin: 0 5%; */
+/* padding-top: 5%; */
+/* position: relative; */
+top: 24%;
+flex-direction: column;
+width: 100%;
+}
+
+.list div{
+  border-top: 0.5px solid #767676;
+  color: #E5E5E5;
+  display: grid;
+  grid-template-columns: 1fr 65% ;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding: 2% 0;
+  margin: 0 5%;
+}
+
+
+.list img{
+    height: 271.17px;
+    position: absolute;
+    width: 351px;
+    left: 10%;
+    filter: grayscale(100%);
+}
+.list p{
+    font-size: 27px;
+    font-weight: 200;
+}
+
+.mainTitle{
+    font-size: 40px;
+    font-family: "Georama";
+    font-weight: 100;
+    display: inline-block;
+    margin: 0;
+}
+
+.subTitle{
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: "Montserrat"; 
+    width: 60%;
+    display: block;
+    padding-top: 2%;
+    line-height: 1.1;
+}
+
+.list div:hover {
+    background-color: #E5E5E5;
+    color: #F44C06;
+    z-index: 1;
+    transform: scale(1.12);
+  }
+  .list div:hover .mainTitle, .list div:hover p {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .hover-list div:hover .img-list {
+    display: inline-block;
+    position: absolute;
+    top: -20%;
+    left: 13.5%;
+    z-index: 1;
+  }
+  .list div:hover p {
+    padding-left: 13%;
+  }
+  .list div:hover .subTitle {
+    display: block !important;
+    color: black;
+  }
+  .list div:hover .mainTitle {
+    padding-left: 2%;
+  }
+
+  @media screen and (min-width: 2000px) {
+
+  }
+    @media screen and (max-width: 1600px) {
+  
+    }
+      @media screen and (max-width: 1200px) {
+  
+      }
+        @media screen and (max-width: 768px) {
+          .list{
+            top: 16.2%;
+          }
+          .list p {
+            font-weight: 100;
+          } 
+
+          .mainTitle{
+            font-size: 2em;
+          }
+
+          .subTitle{
+            width: 90%;
+          }
+
+          .list img{
+            display: none;
+          }
+
+          .list div:hover .mainTitle, .list div:hover p {
+            font-size: 2em;
+            font-weight: 600;
+          }
+        }
+        @media screen and (max-width: 450px) {
+          .list{
+            top: 12.5%;
+          }
+
+          .list div{
+            grid-template-columns: 1fr 75%;
+          }
+
+          .list p {
+            font-weight: 100;
+            font-size: 1.2em;
+          } 
+
+          .mainTitle{
+            font-size: 1.3em;
+            font-weight: 100;
+          }
+
+          .subTitle{
+            width: 90%;
+            font-size: 0.6em;
+            padding-bottom: 5%;
+          }
+
+          .list img{
+            display: none;
+          }
+
+          .list div:hover .mainTitle, .list div:hover p {
+            font-size: 1.5em;
+            font-weight: 600;
+          }
+        }
