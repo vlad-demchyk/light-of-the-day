@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklight_of_the_day=self.webpackChunklight_of_the_day||[]).push([[764],{764:(e,t,h)=>{h.r(t),h.d(t,{default:()=>s});const s={}}}]);
+//# sourceMappingURL=764.5550ed74.chunk.js.map
