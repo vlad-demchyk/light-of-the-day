@@ -13,13 +13,34 @@
 
 
 @media screen and (min-width: 2000px) {
+  .paragraph_sec_one{
+    /* right: 5%; */
+    /* left: auto; */
+    /* width: 50%; */
+    display: block;
+    width: 30% !important;
+    top: 42%;
+    font-size: 1.8rem;
+    width: 450px;
+    text-align: end;
+}
 
 }
   @media screen and (max-width: 1600px) {
 
   }
-    @media screen and (max-width: 1200px) {
-
+    @media screen and (max-width: 1450px) {
+      .paragraph_sec_one{
+        right: 5%;
+        left: auto;
+        /* width: 50%; */
+        display: block;
+        width: 45% !important;
+        top: 55%;
+        font-size: 1.8rem;
+        width: 450px;
+        text-align: end;
+    }
     }
       @media screen and (max-width: 768px) {
         .paragraph_sec_one{

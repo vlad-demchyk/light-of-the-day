@@ -7,6 +7,7 @@ position: absolute;
 top: 24%;
 flex-direction: column;
 width: 100%;
+z-index: 3;
 }
 
 .list div{
@@ -85,7 +86,9 @@ width: 100%;
 
   }
     @media screen and (max-width: 1600px) {
-  
+      .list img{
+        display: none;
+      }
     }
       @media screen and (max-width: 1200px) {
   
@@ -95,11 +98,12 @@ width: 100%;
             top: 16.2%;
           }
           .list p {
+            font-size: 1.2em;
             font-weight: 100;
           } 
 
           .mainTitle{
-            font-size: 2em;
+            font-size: 1.3em;
           }
 
           .subTitle{
@@ -111,7 +115,7 @@ width: 100%;
           }
 
           .list div:hover .mainTitle, .list div:hover p {
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: 600;
           }
         }

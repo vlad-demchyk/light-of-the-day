@@ -4,7 +4,7 @@
   position: absolute;
   top: 38%;
   /* padding-top: 5%; */
-  z-index: 5;
+  z-index: 2;
 }
 
 
@@ -12,7 +12,7 @@
   color: #f44c06;
   font-family: 'Georama';
   font-weight: 900;
-  font-size: 11em;
+  font-size: 9vw;
   width: 50%;
   /* float: right; */
   margin-left: auto;
@@ -165,9 +165,9 @@
     grid-auto-columns: calc(100% / 4); /* Чотири слайда */
   }
   
-  .scrollBar{
+  /* .scrollBar{
     top: 43%;
-  }
+  } */
 }
 
 @media screen and (max-width: 1600px) {
@@ -182,6 +182,10 @@
   .scrollBar{
     top: 38%;
   }
+/* 
+  .title{
+    font-size: 11vw;
+  } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -191,8 +195,13 @@
   }
   
   .scrollBar{
-    top: 35%;
+    top: 38%;
   }
+
+  /* .title{
+    font-size: 5em;
+    margin-right: 0%;
+  } */
 }
 
 @media screen and (max-width: 768px) {
@@ -205,12 +214,12 @@
     aspect-ratio: 3/3;
   }
 
-  .title{
+  /* .title{
     font-size: 5em;
     margin-right: 20%;
-  }
+  } */
   .scrollBar{
-    top: 27%;
+    top: 26%;
   }
 
   .subtitle{
@@ -234,7 +243,6 @@ font-size: 3em;
 }
 
 @media screen and (max-width: 450px) {
-  /* Телефони: показуємо 2 повних слайда */
   .carousel {
     grid-auto-columns: calc(100% / 1.35); /* Два повних слайда */
   }
@@ -242,10 +250,9 @@ font-size: 3em;
     aspect-ratio: 3/3;
   }
 
-  .title{
+  /* .title{
     font-size: 3.5em;
-    margin-right: 20%;
-  }
+  } */
   .scrollBar{
     top: 22%;
   }
@@ -260,11 +267,6 @@ font-size: 3em;
     font-weight: 100;
   }
 
-  .slide-button {
-top: 50%;
-width: auto;
-font-size: 3em;
-}
 .badge{
   font-size: 1.5em !important;
 }
