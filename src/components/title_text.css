@@ -1,28 +1,29 @@
 
-.title_text,
-.title_text2 {
+.title_class {
     color: #F44C06;
-    font-weight: 900;
-    font-size: 8.9em;
-    font-family: "Georama", sans-serif;
+    /* font-weight: 900; */
+    font-size: 4.1em;
+    /* font-family: "Georama", sans-serif; */
     position: absolute;
-    font-style: normal;
+    /* font-style: normal; */
     margin: 0;
+     top: 10%;
+    left: 5%;
+    width: 90%;
     /* min-width: 1318px; */
     /* max-width: 1300px; */
     /* line-height: 141px; */
+    line-height: 1;
 }
 
-.title_text {
-    /* min-width: 1318px; */
-    top: 10%;
-    left: 5%;
+.title_class h1{
+margin: 0;
+font-style: normal;
+font-family: "Georama", sans-serif;
+font-weight: 900;
 }
-
-.title_text2 {
-    /* min-width: 1131px; */
-    top: 21%;
-    right: 5%;
+.title_text2{
+float: right;
 }
 
 @media screen and (min-width: 2000px) {
@@ -33,16 +34,14 @@
         /* width: 100%; */
         line-height: 0.9;
     }
-    .title_text{
-        
-    }
+
     .title_text2{
         top: 25%;
         /* left: 5%; */
     }
 }
 
-    @media screen and (max-width: 1439px) {
+    @media screen and (max-width: 1450px) {
         .title_text,
         .title_text2 {
             font-weight: 800;
@@ -50,8 +49,8 @@
             width: 60%;
             line-height: 0.9;
         }
-        .title_text{
-            
+        .title_text2{
+            float: none;
         }
         .title_text2{
             top: 31%;
@@ -63,16 +62,11 @@
         
 .title_text,
 .title_text2 {
-    font-weight: 800;
     font-size: 6rem;
-    line-height: 0.9;
 }
-.title_text{
-    
-}
+
 .title_text2{
     top: 27%;
-    left: 5%;
 }
      
 }
@@ -81,17 +75,11 @@
         
 .title_text,
 .title_text2 {
-    font-weight: 800;
-    /* width: 50%; */
     font-size: 5rem;
-    line-height: 0.9;
 }
-.title_text{
-    
-}
+
 .title_text2{
     top: 23%;
-    left: 5%;
 }
      
       }
@@ -100,14 +88,11 @@
         
 .title_text,
 .title_text2 {
-    /* font-weight: 800;
-    width: 50%; */
+
     font-size: 4rem;
-    /* line-height: 0.9; */
+
 }
-.title_text{
-    
-}
+
 .title_text2{
     top: 21%;
     left: 5%;

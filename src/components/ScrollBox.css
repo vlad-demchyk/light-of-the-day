@@ -1,8 +1,8 @@
 .scrollBar{
   width: 100%;
   /* position: relative; */
-  position: absolute;
-  top: 38%;
+  position: relative;
+  /* top: 38%; */
   /* padding-top: 5%; */
   z-index: 2;
 }
@@ -179,9 +179,9 @@
     width: auto;
   }
   
-  .scrollBar{
+  /* .scrollBar{
     top: 38%;
-  }
+  } */
 /* 
   .title{
     font-size: 11vw;
@@ -194,9 +194,9 @@
     grid-auto-columns: calc(100% / 2); /* Два повних слайда, третій частково */
   }
   
-  .scrollBar{
+  /* .scrollBar{
     top: 38%;
-  }
+  } */
 
   /* .title{
     font-size: 5em;
@@ -218,9 +218,9 @@
     font-size: 5em;
     margin-right: 20%;
   } */
-  .scrollBar{
+  /* .scrollBar{
     top: 26%;
-  }
+  } */
 
   .subtitle{
     grid-template-columns: none !important;
@@ -253,9 +253,9 @@ font-size: 3em;
   /* .title{
     font-size: 3.5em;
   } */
-  .scrollBar{
+  /* .scrollBar{
     top: 22%;
-  }
+  } */
 
   .subtitle{
     grid-template-columns: none !important;

@@ -11,16 +11,22 @@
     box-sizing: border-box;
     /* overflow: hidden; */
 }
+.full{
+    /* height: 100%; */
+    width: 100%;
+}
 
 .achievements{
-position: absolute;
+position: relative;
 display: grid;
 grid-template-rows: min-content max-content;
 gap: 50px;
 width: 70vw;
 /* width: 1133px; */
-right: 5%;
-top: 5%;
+/* float: right; */
+margin-left: auto;
+margin-right: 5%;
+margin-top: 25%;
 }
 
 .description{
@@ -120,11 +126,12 @@ grid-template-rows: min-content min-content;
     }
       @media screen and (max-width: 1280px) {
         .achievements{
-            margin-top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Зміщує елемент по центру */
+            margin-top:30%;
+            margin-left: 5%;
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); Зміщує елемент по центру */
             width: 90%;
-            grid-template-rows: max-content;
+            /* grid-template-rows: max-content; */
         }
     
         .description p:nth-child(1){
@@ -151,12 +158,12 @@ grid-template-rows: min-content min-content;
       }
         @media screen and (max-width: 768px) {
 
-            .achievements{
+            /* .achievements{
                 left: 50%;
-                transform: translate(-50%, -50%); /* Зміщує елемент по центру */
+                transform: translate(-50%, -50%);
                 width: 90%;
                 grid-template-rows: max-content;
-            }
+            } */
         
             .description p:nth-child(1){
                 display: none;
@@ -184,11 +191,7 @@ grid-template-rows: min-content min-content;
         @media screen and (max-width: 450px) {
 
             .achievements{
-                left: 50%;
-                top: 3.5%;
-                transform: translate(-50%, -50%); /* Зміщує елемент по центру */
-                width: 90%;
-                grid-template-rows: max-content;
+                
             }
         
             .description p:nth-child(1){

@@ -34,6 +34,7 @@ function Counter({ array }) {
 function SectionTwo(){
     return (
         <div className="section_2">
+            <div className='full'>
             <div className='achievements'>
                 <div className='description'>
                     <p>{since}</p>
@@ -42,8 +43,8 @@ function SectionTwo(){
                 </div>
                 <Counter array={counter}></Counter>
             </div>
+            </div>
             <Lighter></Lighter>
-
             <HoverList></HoverList>
             <ScrollBox></ScrollBox>
     

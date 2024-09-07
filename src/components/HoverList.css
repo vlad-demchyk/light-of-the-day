@@ -1,13 +1,14 @@
 .list{
 display: flex;
-position: absolute;
+position: relative;
 /* margin: 0 5%; */
 /* padding-top: 5%; */
 /* position: relative; */
-top: 24%;
+/* top: 24%; */
 flex-direction: column;
 width: 100%;
 z-index: 3;
+margin-top: 10%;
 }
 
 .list div{
@@ -89,13 +90,16 @@ z-index: 3;
       .list img{
         display: none;
       }
+      .list{
+        padding-top: 5%;
+      }
     }
-      @media screen and (max-width: 1200px) {
-  
+      @media screen and (max-width: 1280px) {
+       
       }
         @media screen and (max-width: 768px) {
           .list{
-            top: 16.2%;
+            /* top: 70vh; */
           }
           .list p {
             font-size: 1.2em;
@@ -119,9 +123,9 @@ z-index: 3;
             font-weight: 600;
           }
         }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 650px) {
           .list{
-            top: 12.5%;
+            /* top: 18.5%; */
           }
 
           .list div{

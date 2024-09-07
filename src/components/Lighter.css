@@ -1,116 +1,98 @@
 
 .lighter_Container {
     width: 100%;
-    height: 814px;
-    position: absolute;
-    /* position: relative; */
+    position: relative;
     z-index: 2;
-    top: 11%;
+    /* margin-top: 10%; */
+    /* top: 11%; */
     box-sizing: border-box;
 
 } 
 
+.lighter_img_box {
+    width: 100vw;
+}
 .lighter_img {
     width: 430px;
     height: 513px;
     position: relative;
     left: 0;
     top: 0;
-    /* z-index: -1; */
 }
 
-.sub_main_text,
-.sub_main_text2 {
+.title_class_light {
     color: #F44C06;
     font-weight: 900;
-    font-size: 10em;
+    font-size: 5.1em;
     font-family: "Georama", sans-serif;
     font-style: normal;
-    margin: 0;
-    /* min-width: 1318px; */
-    /* max-width: 1300px; */
+    /* margin-bottom: 10%; */
+    width: 100%;
     line-height: 1;
+    position: relative !important;
+}
+.title_class_light *{
+    /* font-size: 4.1em */
+    margin: 0 5%;
 }
 
-.sub_main_text {
-    position: absolute;
-    bottom: 25%;
-    /* min-width: 1419px; */
-    left: 5%
-}
 
 .sub_main_text2 {
-    position: absolute;
-    /* min-width: 853px; */
-    bottom: 0%;
-    right: 5%;
+ float: right;
 }
 
 @media screen and (min-width: 2000px) {
 
 }
   @media screen and (max-width: 1600px) {
-
+    .sub_main_text{
+        white-space: nowrap;
+    }
   }
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 1280px) {
         .lighter_Container {
-            top: 13%;
-            /* height: max-content; */
+           margin-top: 10%;
+    
         }
         
         .lighter_img {
             height: 450px;
             width: auto;
-            /* left: 2%; */
+        
         }
 
-        .sub_main_text,
-        .sub_main_text2 {
-            font-size: 6.2em;
-            font-weight: 700;
-            /* margin: 0; */
+        .title_class_light * {
+            font-size: 6.2rem;
         }
 
+ 
         .sub_main_text{
-/* position: relative; */
-        }
-        .sub_main_text2{
-            /* position: relative; */
-            bottom: 10%;
-            /* float: right; */
+            white-space: nowrap;
         }
     }
       @media screen and (max-width: 768px) {
      
-        .lighter_Container {
+        /* .lighter_Container {
             top: 9%;
             height: max-content;
-        }
-        
+        } */
+         
         .lighter_img {
             height: 300px;
+            height: 60vw;
             width: auto;
             left: 2%;
         }
 
-        .sub_main_text,
-        .sub_main_text2 {
-            font-size: 4.6em;
+        .title_class_light *{
+            /* font-size: 4.5rem; */
+            font-size: 10.5vw;
             font-weight: 700;
         }
-
-        .sub_main_text{
-position: relative;
-        }
-        .sub_main_text2{
-            position: relative;
-            float: right;
-        }
       }
-      @media screen and (max-width: 600px) {
+      /* @media screen and (max-width: 600px) {
      
         .lighter_Container {
-            /* top: 7%; */
             height: max-content;
         } 
         
@@ -122,7 +104,7 @@ position: relative;
 
         .sub_main_text,
         .sub_main_text2 {
-            /* font-size: 3.2em; */
+            font-size: 3.2rem;
             font-weight: 700;
         } 
 
@@ -133,21 +115,21 @@ position: relative;
             position: relative;
             float: right;
         }
-      }
+      } */
       @media screen and (max-width: 450px){
         .lighter_Container {
-            top: 7%;
-            height: max-content;
+            /* top: 7%;
+            height: max-content; */
         } 
         .sub_main_text,
         .sub_main_text2 {
-            font-size: 3.2em;
-            font-weight: 700;
+            /* font-size: 3.2rem; */
+            /* font-weight: 700; */
         }
       }
-      @media screen and (max-width: 450px){
+      /* @media screen and (max-width: 450px){
         .sub_main_text,
         .sub_main_text2 {
             font-size: 2.5em;
         }
-      }
+      } */
