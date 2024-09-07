@@ -44,6 +44,14 @@ const scrollContent = [
     subTitle_2:
       "Spacious design that blends industrial style with an open floor plan.",
   },
+  // {
+  //   img: `${process.env.PUBLIC_URL}/image/our_projects/7.png`,
+  //   mainTitle: "Another one",
+  //   subTitle_1:
+  //     "lorem caram urem belim onyr",
+  //   subTitle_2:
+  //     "glory and the force.",
+  // },
 ];
 
 function CreateElements(array){
@@ -93,26 +101,37 @@ function startLogicScroll(){
   const carousel = document.querySelector(".carousel")
     const arrowBtns = document.querySelectorAll(".slide-button")
     const firstCardWidth = document.querySelector(".card").offsetWidth;
-    const carouselChildrens = [...carousel.children]
+    // const carouselChildrens = [...carousel.children]
     
     let isDragging = false, startX, startScrollLeft, timeoutID;
     
     //get the number of cards that can fit in the carousel an once
-    let cardPerView = Math.round(carousel.offsetWidth/firstCardWidth);
+
+    // let cardPerView = 1;
+    // let cardPerView = Math.round(carousel.offsetWidth/firstCardWidth);
     
     //insert copies of the last few cards to beginning of carousel for infinite scrolling
-    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-        carousel.insertAdjacentHTML('afterbegin', card.outerHTML);
-    })
+
+    // carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    //     carousel.insertAdjacentHTML('afterbegin', card.outerHTML);
+    // })
     
     //insert copies of the first few cards to end of carousel for infinite scrolling
-    carouselChildrens.slice(0, cardPerView).forEach(card => {
-        carousel.insertAdjacentHTML('beforeend', card.outerHTML);
-    })
+
+    // carouselChildrens.slice(0, cardPerView).forEach(card => {
+    //     carousel.insertAdjacentHTML('beforeend', card.outerHTML);
+    // })
     
     arrowBtns.forEach(btn =>{
         btn.addEventListener('click', ()=>{
-            carousel.scrollLeft += btn.id ==='prev-slide' ? -firstCardWidth : firstCardWidth
+          if (btn.id === 'prev-slide') {
+            // Переміщення вліво
+            carousel.scrollLeft -= firstCardWidth;
+          } else {
+            // Переміщення вправо
+            carousel.scrollLeft += firstCardWidth;
+          }
+            // carousel.scrollLeft += btn.id ==='prev-slide' ? -firstCardWidth : firstCardWidth
         })
     })
     
@@ -133,39 +152,41 @@ function startLogicScroll(){
       timeoutID = setTimeout(()=> carousel.scrollLeft+=firstCardWidth, 2500)
     }
     
-    autoPlay()
+    // autoPlay()
 
     const dragging = (e)=>{
         if (!isDragging) return;
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
     }
     
-    const infiniteScroll = ()=>{
-        //if the carousel is at the beginning, scroll to the end
-    if(carousel.scrollLeft === 0){
-        carousel.classList.add("no-transition")
-    carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-        carousel.classList.remove("no-transition")
-    
-    } 
-        //if the carousel is at the end, scroll to the beginning
-    else if (Math.ceil(carousel.scrollLeft)===carousel.scrollWidth - carousel.offsetWidth){
-        carousel.classList.add("no-transition")
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition")
-    
-    }
+    //if the carousel is at the beginning, scroll to the end
+    // const infiniteScroll = ()=>{
 
-    clearTimeout(timeoutID)
-    if(wrapper.matches(":hover"))autoPlay()
-    }
+    // if(carousel.scrollLeft === 0){
+    //     carousel.classList.add("no-transition")
+    // carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+    //     carousel.classList.remove("no-transition")
+    
+    // } 
+    //     //if the carousel is at the end, scroll to the beginning
+
+    // else if (Math.ceil(carousel.scrollLeft)===carousel.scrollWidth - carousel.offsetWidth){
+    //     carousel.classList.add("no-transition")
+    //     carousel.scrollLeft = carousel.offsetWidth;
+    //     carousel.classList.remove("no-transition")
+    
+    // }
+
+    // clearTimeout(timeoutID)
+    // if(wrapper.matches(":hover"))autoPlay()
+    // }
     
     carousel.addEventListener('mousedown', dragStart)
     carousel.addEventListener('mousemove', dragging)
     document.addEventListener('mouseup', dragStop)
-    carousel.addEventListener('scroll', infiniteScroll)
-    wrapper.addEventListener('mouseenter', ()=> clearTimeout(timeoutID))
-    wrapper.addEventListener('mouseleave', autoPlay)
+    // carousel.addEventListener('scroll', infiniteScroll)
+    // wrapper.addEventListener('mouseenter', ()=> clearTimeout(timeoutID))
+    // wrapper.addEventListener('mouseleave', autoPlay)
 }
 
 function ScrollBox() {
