@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/light-of-the-day/static/css/main.691e315b.css",
-    "main.js": "/light-of-the-day/static/js/main.15098b18.js",
-    "static/css/764.2fc20633.chunk.css": "/light-of-the-day/static/css/764.2fc20633.chunk.css",
+    "main.css": "/light-of-the-day/static/css/main.1d4fd6f3.css",
+    "main.js": "/light-of-the-day/static/js/main.138a0a0e.js",
+    "static/css/764.6e96c551.chunk.css": "/light-of-the-day/static/css/764.6e96c551.chunk.css",
     "static/js/764.5550ed74.chunk.js": "/light-of-the-day/static/js/764.5550ed74.chunk.js",
     "static/js/453.137c2945.chunk.js": "/light-of-the-day/static/js/453.137c2945.chunk.js",
     "static/media/front.png": "/light-of-the-day/static/media/front.9ebc4cfcf0791ea0b612.png",
@@ -11,14 +11,14 @@
     "static/media/news-paper.png": "/light-of-the-day/static/media/news-paper.48d4dfe2a622b938d3a3.png",
     "static/media/lighter.png": "/light-of-the-day/static/media/lighter.8e1c77026302d7d8cfb1.png",
     "index.html": "/light-of-the-day/index.html",
-    "main.691e315b.css.map": "/light-of-the-day/static/css/main.691e315b.css.map",
-    "main.15098b18.js.map": "/light-of-the-day/static/js/main.15098b18.js.map",
-    "764.2fc20633.chunk.css.map": "/light-of-the-day/static/css/764.2fc20633.chunk.css.map",
+    "main.1d4fd6f3.css.map": "/light-of-the-day/static/css/main.1d4fd6f3.css.map",
+    "main.138a0a0e.js.map": "/light-of-the-day/static/js/main.138a0a0e.js.map",
+    "764.6e96c551.chunk.css.map": "/light-of-the-day/static/css/764.6e96c551.chunk.css.map",
     "764.5550ed74.chunk.js.map": "/light-of-the-day/static/js/764.5550ed74.chunk.js.map",
     "453.137c2945.chunk.js.map": "/light-of-the-day/static/js/453.137c2945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.691e315b.css",
-    "static/js/main.15098b18.js"
+    "static/css/main.1d4fd6f3.css",
+    "static/js/main.138a0a0e.js"
   ]
 }
