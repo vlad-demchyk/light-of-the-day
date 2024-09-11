@@ -1,16 +1,68 @@
 /* Контейнер для кола */
+
+.for_sec_one{
+  /* position: absolute; */
+  top: 50%;
+  right: 20%;
+}
+.for_sec_two{
+  top: 92%;
+  right: 50%;
+}
+
 .circle-container {
     position: absolute;
     width: 155px;
     text-decoration: none;
+    border-radius: 100%;
+    z-index: 1; /* Встановлюємо порядок шарів для контенту */
+  }
+  
+  .pseudo_el::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    margin: 2%;
+    border-radius: 100%;
+    border: 1px solid white;
+  }
+  .circle-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    margin: 17%;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+.circle-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(10, 10, 10, 0.832); /* Напівпрозорий темний фон */
+  filter: blur(8px); /* Розмиття тільки фону */
+  z-index: -1; /* Псевдоелемент за контентом */
+  border-radius: 100%; /* Додаємо трохи заокруглених країв, якщо потрібно */
 }
 
 /* SVG текст по колу */
 .circle-text {
     width: 100%;
     height: 100%;
+    /* margin-top: 0px; */
     transition: transform 0.5s;
+
 }
+
 
 .circle-container:hover .circle-text{
     animation: rotate 7s linear infinite;
@@ -65,13 +117,13 @@ text {
     @media screen and (max-width: 1450px) {
       .circle-container {
         left: 5%;
-        margin-top: 10%;
+        /* margin-top: 10%; */
      }
     }
       @media screen and (max-width: 768px) {
         .circle-container {
            left: 5%;
-           margin-top: 30%;
+           /* margin-top: 30%; */
         }
       }
   

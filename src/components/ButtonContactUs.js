@@ -1,8 +1,10 @@
 import './ButtonContactUs.css';
 
-function ButtonContactUs({style}) {
+function ButtonContactUs({props}) {
   return (
-    <div className="circle-container" style={style}>
+    
+    <a href='https://google.com' className={`circle-container ${props}`}>
+      <span className='pseudo_el'></span>
       <svg viewBox="0 0 200 200" className="circle-text">
         <defs>
           <path
@@ -19,7 +21,7 @@ function ButtonContactUs({style}) {
       <div className="center-content">
         <div className="arrow"></div>
       </div>
-    </div>
+    </a>
   );
 }
 

@@ -2,7 +2,7 @@
 .title_class {
     color: #F44C06;
     /* font-weight: 900; */
-    font-size: 4.1em;
+    font-size: 3.72vw;
     /* font-family: "Georama", sans-serif; */
     position: absolute;
     /* font-style: normal; */
@@ -10,11 +10,27 @@
      top: 10%;
     left: 5%;
     width: 90%;
+    height: min-content;
     /* min-width: 1318px; */
     /* max-width: 1300px; */
     /* line-height: 141px; */
     line-height: 1;
 }
+.paragraph_sec_one{
+    position: absolute;
+    font-weight: 400;
+    /* font-size: 18px; */
+    font-size: 1vw;
+    color: #E5E5E5;
+    width: 316px;
+    /* min-width: 316px; */
+    height: 80px;
+    /* top: 40%; */
+    bottom: -150px;
+    left: 36%;
+    margin: 0;
+}
+
 
 .title_class h1{
 margin: 0;
@@ -27,18 +43,25 @@ float: right;
 }
 
 @media screen and (min-width: 2000px) {
-    .title_text,
+    /* .title_text,
     .title_text2 {
         font-weight: 800;
         font-size: 10.5rem;
-        /* width: 100%; */
         line-height: 0.9;
     }
 
     .title_text2{
         top: 25%;
-        /* left: 5%; */
-    }
+    } */
+
+    /* .paragraph_sec_one{
+        display: block;
+        width: 30% !important;
+        top: 42%;
+        font-size: 1.8rem;
+        width: 450px;
+        text-align: end;
+    } */
 }
 
     @media screen and (max-width: 1450px) {
@@ -56,6 +79,16 @@ float: right;
             top: 31%;
             left: 5%;
         }
+        .paragraph_sec_one{
+            right: 5%;
+            left: auto;
+            /* display: block; */
+            /* width: 45% !important; */
+            /* top: 55%; */
+            font-size: 1.8rem;
+            width: 450px;
+            text-align: end;
+        }
     }
       @media screen and (max-width: 768px) {
         
@@ -67,6 +100,15 @@ float: right;
 
 .title_text2{
     top: 27%;
+}
+.paragraph_sec_one{
+    /* right: 5%; */
+    /* left: auto; */
+    /* display: block; */
+    width: 70% !important;
+    /* top: 50%; */
+    font-size: 1.2rem;
+    text-align: end;
 }
      
 }
@@ -97,5 +139,16 @@ float: right;
     top: 21%;
     left: 5%;
 }
-     
+
+.paragraph_sec_one{
+    /* right: 5%; */
+    /* left: auto; */
+    /* display: block; */
+    width: 75% !important;
+    /* top: 50%; */
+    font-size: 1.2rem;
+    /* width: 450px; */
+    /* text-align: end; */
+}
+
       }

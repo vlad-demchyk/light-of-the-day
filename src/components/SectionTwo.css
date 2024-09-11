@@ -21,7 +21,7 @@ position: relative;
 display: grid;
 grid-template-rows: min-content max-content;
 gap: 50px;
-width: 70vw;
+width: 57vw;
 /* width: 1133px; */
 /* float: right; */
 margin-left: auto;
@@ -41,7 +41,7 @@ margin: 0;
 .description p:nth-child(1){
     font-family: 'Georama', sans-serif;
     /* font-size: 18px; */
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-weight: 200;
     color: #CCCCCC;
     position: absolute;
@@ -50,7 +50,7 @@ margin: 0;
 }
 .description p:nth-child(2){
     font-family: 'Georama', sans-serif;
-    font-size: 4.2vw;
+    font-size: 3.5vw;
     font-weight: 100;
     color: #CCCCCC;
     line-height: 1;
@@ -62,14 +62,15 @@ margin: 0;
 }
 .description p:nth-child(3){
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 0.7vw;
     font-weight: 300;
     color: #E5E5E5;
     text-align: right;
-    width: 319px;
+    /* width: 380px; */
+    max-width: 30%;
     height: 36px;
     position: absolute;
-    bottom: 9px;
+    bottom: 0;
     right: 11px;
 }
 
@@ -111,27 +112,75 @@ grid-template-rows: min-content min-content;
 
 }
 
-/* .main{
-    position: absolute;
-    top: 24%;
-    width: 100%;
-    height: 100%
-  } */
+
+.contact_container{
+    position: relative;
+    margin: 5% 5%;
+    /* box-sizing: content-box; */
+    }
+    
+    .contact_container p{
+    display: inline-block;
+    margin: 0;
+    }
+    
+    .contact_container p:nth-child(1){
+        font-family: 'Georama', sans-serif;
+        font-size: 0.9vw;
+        font-weight: 200;
+        color: #CCCCCC;
+        position: absolute;
+        top: 7px;
+        left: 0;
+    }
+    .contact_container p:nth-child(2){
+        font-family: 'Georama', sans-serif;
+        font-size: 3.2vw;
+        font-weight: 100;
+        color: #CCCCCC;
+        line-height: 1;
+        letter-spacing: -3px;
+        text-indent: 10%;
+        position: relative;
+        text-align: justify;
+        /* width: 99%; */
+    }
+    .contact_container p:nth-child(3){
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9vw;
+        font-weight: 300;
+        color: #E5E5E5;
+        text-align: right;
+        /* width: 300px; */
+        max-width: 20%;
+        position: absolute;
+        bottom: 0;
+        right: 11px;
+    }
+
+    .contact_container div{
+        margin: 0;
+    }
   
   @media screen and (min-width: 2000px) {
 
   }
-    @media screen and (max-width: 1600px) {
-
+    @media screen and (max-width: 1450px) {
+        .contact_container p:nth-child(1){
+            display: none;
+        }
+        .contact_container p:nth-child(2){
+            font-size: 3.3em;
+        }
+        .contact_container p:nth-child(3){
+            display: none;
+        }
     }
       @media screen and (max-width: 1280px) {
         .achievements{
             margin-top:30%;
             margin-left: 5%;
-            /* left: 50%; */
-            /* transform: translate(-50%, -50%); Зміщує елемент по центру */
             width: 90%;
-            /* grid-template-rows: max-content; */
         }
     
         .description p:nth-child(1){
@@ -143,9 +192,7 @@ grid-template-rows: min-content min-content;
         .description p:nth-child(2){
         font-size: 3.3em;
         letter-spacing: normal;
-        /* text-align:start; */
         display: block;
-
         }
 
         .counter div p:nth-of-type(1){
@@ -158,25 +205,15 @@ grid-template-rows: min-content min-content;
       }
         @media screen and (max-width: 768px) {
 
-            /* .achievements{
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 90%;
-                grid-template-rows: max-content;
-            } */
-        
-            .description p:nth-child(1){
-                display: none;
-            }
-            .description p:nth-child(3){
-                display: none;
-            }
             .description p:nth-child(2){
             font-size: 2.3em;
+            }
+          
+            .contact_container p:nth-child(2){
+            font-size: 2.2em;
+            font-size: 4.8vw;
             letter-spacing: normal;
-            /* text-align:start; */
-            display: block;
-
+            text-indent: 32vw;
             }
 
             .counter div p:nth-of-type(1){
@@ -190,22 +227,16 @@ grid-template-rows: min-content min-content;
     
         @media screen and (max-width: 450px) {
 
-            .achievements{
-                
-            }
         
-            .description p:nth-child(1){
-                display: none;
-            }
-            .description p:nth-child(3){
-                display: none;
-            }
             .description p:nth-child(2){
             font-size: 1.4em;
             letter-spacing: normal;
             text-align:start;
             display: block;
-
+            }
+            .contact_container p:nth-child(2){
+                font-size: 7vw;
+                text-indent: 30vw;
             }
 
             .counter div p:nth-of-type(1){

@@ -23,7 +23,7 @@
 .title_class_light {
     color: #F44C06;
     font-weight: 900;
-    font-size: 5.1em;
+    font-size: 5.1vw;
     font-family: "Georama", sans-serif;
     font-style: normal;
     /* margin-bottom: 10%; */
@@ -62,7 +62,7 @@
         }
 
         .title_class_light * {
-            font-size: 6.2rem;
+            /* font-size: 6.2rem; */
         }
 
  
@@ -85,8 +85,7 @@
         }
 
         .title_class_light *{
-            /* font-size: 4.5rem; */
-            font-size: 10.5vw;
+            /* font-size: 10.5vw; */
             font-weight: 700;
         }
       }

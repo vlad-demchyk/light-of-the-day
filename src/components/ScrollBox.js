@@ -96,15 +96,37 @@ function CreateElements(array){
       );
 }
 
+
 function startLogicScroll(){
   const wrapper = document.querySelector(".wrapper")
   const carousel = document.querySelector(".carousel")
     const arrowBtns = document.querySelectorAll(".slide-button")
     const firstCardWidth = document.querySelector(".card").offsetWidth;
     // const carouselChildrens = [...carousel.children]
+
+    // const firstCard = document.querySelector(".card");
+    // firstCard.focus();
+
+    const cards = document.querySelectorAll(".card"); // Отримуємо всі картки
+    const firstCard = cards[0]; // Перша картка
+    const secondCard = cards[1]; // Друга картка
+  
+    if (window.innerWidth < 768) {
+      // Якщо ширина менше 768 пікселів, фокусуємо другу картку
+      if (secondCard) {
+        secondCard.focus();
+      }
+    } else {
+      // В іншому випадку фокусуємо першу картку
+      if (firstCard) {
+        firstCard.focus();
+      }
+    }
     
     let isDragging = false, startX, startScrollLeft, timeoutID;
     
+    // const
+
     //get the number of cards that can fit in the carousel an once
 
     // let cardPerView = 1;
@@ -148,11 +170,11 @@ function startLogicScroll(){
     }
 
     const autoPlay = ()=>{
-      if(window.innerWidth <800) return
+      if(window.innerWidth <768) return
       timeoutID = setTimeout(()=> carousel.scrollLeft+=firstCardWidth, 2500)
     }
     
-    // autoPlay()
+    autoPlay()
 
     const dragging = (e)=>{
         if (!isDragging) return;
@@ -185,8 +207,9 @@ function startLogicScroll(){
     carousel.addEventListener('mousemove', dragging)
     document.addEventListener('mouseup', dragStop)
     // carousel.addEventListener('scroll', infiniteScroll)
-    // wrapper.addEventListener('mouseenter', ()=> clearTimeout(timeoutID))
-    // wrapper.addEventListener('mouseleave', autoPlay)
+    wrapper.addEventListener('mouseenter', ()=> clearTimeout(timeoutID))
+    wrapper.addEventListener('mouseleave', autoPlay)
+
 }
 
 function ScrollBox() {
@@ -194,6 +217,7 @@ function ScrollBox() {
       startLogicScroll();
     }, []);
   
+
     return <CreateElements array={scrollContent}></CreateElements>;
   }
 

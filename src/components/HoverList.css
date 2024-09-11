@@ -16,7 +16,7 @@ margin-top: 10%;
   border-top: 0.5px solid #767676;
   color: #E5E5E5;
   display: grid;
-  grid-template-columns: 1fr 65% ;
+  grid-template-columns: 1fr 63% ;
   position: relative;
   justify-content: flex-start;
   align-items: center;
@@ -27,10 +27,11 @@ margin-top: 10%;
 
 
 .list img{
-    height: 271.17px;
+    /* height: auto; */
+    aspect-ratio: 4/3;
     position: absolute;
     width: 351px;
-    left: 10%;
+    left: 13%;
     filter: grayscale(100%);
 }
 .list p{
@@ -40,6 +41,7 @@ margin-top: 10%;
 
 .mainTitle{
     font-size: 40px;
+    font-size: 2.1vw;
     font-family: "Georama";
     font-weight: 100;
     display: inline-block;
@@ -64,7 +66,7 @@ margin-top: 10%;
   }
   .list div:hover .mainTitle, .list div:hover p {
     font-weight: 700;
-    font-size: 40px;
+    /* font-size: 2.1vw; */
   }
   .hover-list div:hover .img-list {
     display: inline-block;
@@ -90,26 +92,37 @@ margin-top: 10%;
   }
     @media screen and (max-width: 1600px) {
       .list img{
-        display: none;
+        width: 300px;
       }
       .list{
         padding-top: 5%;
       }
     }
+      @media screen and (max-width: 1450px) {
+        .list img{
+         width: 280px;
+        }
+        .mainTitle{
+          font-size: 2.2vw;
+      
+      }
+      }
+
+
       @media screen and (max-width: 1280px) {
-       
+        .list img{
+         display: none;
+        }
       }
         @media screen and (max-width: 768px) {
-          .list{
-            /* top: 70vh; */
-          }
+     
           .list p {
             font-size: 1.2em;
             font-weight: 100;
           } 
 
           .mainTitle{
-            font-size: 1.3em;
+            font-size: 3.2vw;
           }
 
           .subTitle{
@@ -121,18 +134,15 @@ margin-top: 10%;
           }
 
           .list div:hover .mainTitle, .list div:hover p {
-            font-size: 1.5em;
             font-weight: 600;
           }
         }
         @media screen and (max-width: 650px) {
-          .list{
-            /* top: 18.5%; */
-          }
+         
 
-          .list div{
+          /* .list div{
             grid-template-columns: 1fr 75%;
-          }
+          } */
 
           .list p {
             font-weight: 100;
@@ -140,7 +150,7 @@ margin-top: 10%;
           } 
 
           .mainTitle{
-            font-size: 1.3em;
+            font-size: 4vw;
             font-weight: 100;
           }
 
@@ -152,10 +162,5 @@ margin-top: 10%;
 
           .list img{
             display: none;
-          }
-
-          .list div:hover .mainTitle, .list div:hover p {
-            font-size: 1.5em;
-            font-weight: 600;
           }
         }
