@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/light-of-the-day/static/css/main.e6fac16d.css",
-    "main.js": "/light-of-the-day/static/js/main.7afff7d0.js",
+    "main.css": "/light-of-the-day/static/css/main.cfbcb60c.css",
+    "main.js": "/light-of-the-day/static/js/main.b6b7d14b.js",
     "static/css/764.6f95a7b9.chunk.css": "/light-of-the-day/static/css/764.6f95a7b9.chunk.css",
     "static/js/764.5550ed74.chunk.js": "/light-of-the-day/static/js/764.5550ed74.chunk.js",
     "static/js/453.137c2945.chunk.js": "/light-of-the-day/static/js/453.137c2945.chunk.js",
@@ -11,14 +11,14 @@
     "static/media/news-paper.png": "/light-of-the-day/static/media/news-paper.48d4dfe2a622b938d3a3.png",
     "static/media/lighter.png": "/light-of-the-day/static/media/lighter.8e1c77026302d7d8cfb1.png",
     "index.html": "/light-of-the-day/index.html",
-    "main.e6fac16d.css.map": "/light-of-the-day/static/css/main.e6fac16d.css.map",
-    "main.7afff7d0.js.map": "/light-of-the-day/static/js/main.7afff7d0.js.map",
+    "main.cfbcb60c.css.map": "/light-of-the-day/static/css/main.cfbcb60c.css.map",
+    "main.b6b7d14b.js.map": "/light-of-the-day/static/js/main.b6b7d14b.js.map",
     "764.6f95a7b9.chunk.css.map": "/light-of-the-day/static/css/764.6f95a7b9.chunk.css.map",
     "764.5550ed74.chunk.js.map": "/light-of-the-day/static/js/764.5550ed74.chunk.js.map",
     "453.137c2945.chunk.js.map": "/light-of-the-day/static/js/453.137c2945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6fac16d.css",
-    "static/js/main.7afff7d0.js"
+    "static/css/main.cfbcb60c.css",
+    "static/js/main.b6b7d14b.js"
   ]
 }
