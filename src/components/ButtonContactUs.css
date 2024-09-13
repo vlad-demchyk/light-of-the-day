@@ -115,15 +115,29 @@ text {
 
   }
     @media screen and (max-width: 1450px) {
-      .circle-container {
+      .for_sec_one{
+        /* position: absolute; */
+        top: 75%;
         left: 5%;
-        /* margin-top: 10%; */
-     }
+      }
     }
       @media screen and (max-width: 768px) {
+        .for_sec_one{
+          /* position: absolute; */
+          top: 75%;
+        }
+        .for_sec_two{
+          top: 92%;
+          left: 5%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .for_sec_one{
+          /* position: absolute; */
+          top: 75%;
+        }
         .circle-container {
-           left: 5%;
-           /* margin-top: 30%; */
+          width: 32vw;
         }
       }
   

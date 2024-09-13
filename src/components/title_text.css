@@ -22,11 +22,12 @@
     /* font-size: 18px; */
     font-size: 1vw;
     color: #E5E5E5;
-    width: 316px;
+    width: 350px;
     /* min-width: 316px; */
     height: 80px;
-    /* top: 40%; */
-    bottom: -150px;
+    text-align: justify;
+    /* bottom: -150px; */
+    bottom: -50%;
     left: 36%;
     margin: 0;
 }
@@ -43,25 +44,7 @@ float: right;
 }
 
 @media screen and (min-width: 2000px) {
-    /* .title_text,
-    .title_text2 {
-        font-weight: 800;
-        font-size: 10.5rem;
-        line-height: 0.9;
-    }
-
-    .title_text2{
-        top: 25%;
-    } */
-
-    /* .paragraph_sec_one{
-        display: block;
-        width: 30% !important;
-        top: 42%;
-        font-size: 1.8rem;
-        width: 450px;
-        text-align: end;
-    } */
+ 
 }
 
     @media screen and (max-width: 1450px) {
@@ -75,16 +58,9 @@ float: right;
         .title_text2{
             float: none;
         }
-        .title_text2{
-            top: 31%;
-            left: 5%;
-        }
         .paragraph_sec_one{
             right: 5%;
             left: auto;
-            /* display: block; */
-            /* width: 45% !important; */
-            /* top: 55%; */
             font-size: 1.8rem;
             width: 450px;
             text-align: end;
@@ -98,15 +74,8 @@ float: right;
     font-size: 6rem;
 }
 
-.title_text2{
-    top: 27%;
-}
 .paragraph_sec_one{
-    /* right: 5%; */
-    /* left: auto; */
-    /* display: block; */
     width: 70% !important;
-    /* top: 50%; */
     font-size: 1.2rem;
     text-align: end;
 }
@@ -114,41 +83,25 @@ float: right;
 }
       @media screen and (max-width: 480px) {
         
-        
-.title_text,
-.title_text2 {
-    font-size: 5rem;
-}
+        /* .title_class{
+            top: 17vw;
+        } */
 
-.title_text2{
-    top: 23%;
-}
-     
-      }
-      @media screen and (max-width: 380px) {
-        
-        
-.title_text,
-.title_text2 {
-
-    font-size: 4rem;
-
-}
-
-.title_text2{
-    top: 21%;
-    left: 5%;
+.title_class h1 {
+    /* font-size: 5rem; */
+    font-size: 17vw;
 }
 
 .paragraph_sec_one{
-    /* right: 5%; */
-    /* left: auto; */
-    /* display: block; */
     width: 75% !important;
-    /* top: 50%; */
-    font-size: 1.2rem;
-    /* width: 450px; */
-    /* text-align: end; */
-}
+    font-size: 4vw;
+   }
+     
+      }
+      @media screen and (max-width: 380px) {
+
+.paragraph_sec_one{
+    width: 75% !important;
+   }
 
       }

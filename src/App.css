@@ -20,39 +20,33 @@ body{
   pointer-events: none;
 }
 
-.news-paper{
+/* .news-paper{
   position: absolute;
   object-fit: cover;
   width: 100%;
   top: 10%;
   z-index: 2;
-}
+} */
 
-@media screen and (min-width: 2000px) {
-  .news-paper{
-    /* width: 100%;  */
-    /* transform: scale(1.5) translateX(15%); 
-    /* transform-origin: left center;  */
-    /* top: 10%; */
-  }
+/* @media screen and (min-width: 2000px) {
+
 }
   @media screen and (max-width: 1600px) {
 
   }
     @media screen and (max-width: 1450px) {
       .news-paper{
-        width: 100%; /* Адаптивна ширина */
-        transform: scale(1.5) translateX(15%); /* Збільшуємо зображення на 150% і зміщуємо */
-        /* transform-origin: left center;  */
+        width: 100%;
+        transform: scale(1.5) translateX(15%); 
         top: 11.5%;
       }
     }
       @media screen and (max-width: 768px) {
      
         .news-paper{
-          width: 100%; /* Адаптивна ширина */
-          transform: scale(1.5) translateX(15%); /* Збільшуємо зображення на 150% і зміщуємо */
-          /* transform-origin: left center;  */
+          width: 100%;
+          transform: scale(1.5) translateX(15%);
+        
           top: 12%;
 }
 
@@ -60,10 +54,9 @@ body{
       @media screen and (max-width: 500px) {
      
         .news-paper{
-          width: 100%; /* Адаптивна ширина */
-          transform: scale(1.5) translateX(15%); /* Збільшуємо зображення на 150% і зміщуємо */
-          /* transform-origin: left center;  */
+          width: 100%;
+          transform: scale(1.5) translateX(15%);
           top: 12.5%;
 }
 
-      }
+      } */

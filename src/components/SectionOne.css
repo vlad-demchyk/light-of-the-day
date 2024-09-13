@@ -13,7 +13,38 @@
   display: flex;
   position: relative;
   color: white;
-  overflow: hidden;
+  /* overflow-y: hidden; */
   z-index: 2;
 }
 
+.news-paper{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  bottom: 0;
+  transform: translate(0%, 50%); /* Переміщаємо квадрат на 50% вниз по вертикалі */
+  z-index: 3;
+}
+
+@media screen and (min-width: 2000px) {
+
+}
+  @media screen and (max-width: 1600px) {
+
+  }
+    @media screen and (max-width: 1450px) {
+      .news-paper{
+        transform: scale(1.5) translate(15%, 40%);
+      }
+    }
+      @media screen and (max-width: 768px) {
+        .section_1{
+          height: 800px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .section_1{
+          height: 700px;
+          height: 165vw;
+        }
+      }

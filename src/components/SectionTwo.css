@@ -9,10 +9,10 @@
     width: 100%;
     height: 7000px;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    z-index: 1;
+
 }
 .full{
-    /* height: 100%; */
     width: 100%;
 }
 
@@ -40,8 +40,7 @@ margin: 0;
 
 .description p:nth-child(1){
     font-family: 'Georama', sans-serif;
-    /* font-size: 18px; */
-    font-size: 0.9vw;
+    font-size: max(16px, 0.9vw);
     font-weight: 200;
     color: #CCCCCC;
     position: absolute;
@@ -62,12 +61,13 @@ margin: 0;
 }
 .description p:nth-child(3){
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.7vw;
+    font-size: max(16px, 0.7vw);
     font-weight: 300;
     color: #E5E5E5;
     text-align: right;
     /* width: 380px; */
     max-width: 30%;
+    max-width: clamp(380px, 30% , 500px);
     height: 36px;
     position: absolute;
     bottom: 0;
@@ -89,7 +89,8 @@ grid-template-rows: min-content min-content;
 }
 
 .counter div p:first-of-type{
-    font-size: 6.875rem;
+    /* font-size: 6.875rem; */
+    font-size: 5.7vw;
     font-weight: 700;
     font-family: "georama"sans-serif;
     color: #E5E5E5;
@@ -171,6 +172,7 @@ grid-template-rows: min-content min-content;
         }
         .contact_container p:nth-child(2){
             font-size: 3.3em;
+            text-align: left;
         }
         .contact_container p:nth-child(3){
             display: none;
@@ -190,34 +192,39 @@ grid-template-rows: min-content min-content;
             display: none;
         }
         .description p:nth-child(2){
-        font-size: 3.3em;
+        /* font-size: 3.3em; */
+        font-size: 4.2vw;
         letter-spacing: normal;
         display: block;
         }
 
         .counter div p:nth-of-type(1){
             font-size: 4em;
+            /* font-size: 5vw; */
         }
         .counter div p:nth-of-type(2){
             font-weight: 200;
             font-size: 1.9em;
+            font-size: 2vw;
         }
       }
         @media screen and (max-width: 768px) {
 
             .description p:nth-child(2){
-            font-size: 2.3em;
+            /* font-size: 2.3em; */
             }
           
             .contact_container p:nth-child(2){
-            font-size: 2.2em;
-            font-size: 4.8vw;
+         
+            font-size: 5vw;
             letter-spacing: normal;
             text-indent: 32vw;
+            text-align: left;
             }
 
             .counter div p:nth-of-type(1){
                 font-size: 4em;
+                font-size: 8.5vw;
             }
             .counter div p:nth-of-type(2){
                 font-weight: 200;
@@ -226,10 +233,11 @@ grid-template-rows: min-content min-content;
         }
     
         @media screen and (max-width: 450px) {
-
-        
+            
             .description p:nth-child(2){
             font-size: 1.4em;
+            font-size: 5.1vw;
+
             letter-spacing: normal;
             text-align:start;
             display: block;
@@ -244,6 +252,7 @@ grid-template-rows: min-content min-content;
             }
             .counter div p:nth-of-type(2){
                 font-size: 0.9em;
+                font-size: 3.2vw;
                 font-weight: 200;
             }
         }
