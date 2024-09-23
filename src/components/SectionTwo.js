@@ -3,6 +3,8 @@ import Lighter from "./Lighter";
 import HoverList from "./HoverList";
 import ScrollBox from "./ScrollBox";
 import ButtonContactUs from "./ButtonContactUs"
+import OurTeam from "./OurTeam";
+
 const contactElements = [
   "Contact Us",
   "Your questions and comments are important to us. We are ready to listen and collaborate with you.",
@@ -67,7 +69,7 @@ function SectionTwo() {
       <HoverList/>
       <ScrollBox/>
       <ContactTitle></ContactTitle>
-      
+      <OurTeam/>
     </div>
   );
 }

@@ -1,14 +1,24 @@
 body{
   margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.766)),
+  url("./background/otherground2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  position: relative;
   background-color: black;
 }
 
 .main_css{
   position: relative;
   width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
   overflow: hidden;
 }
 

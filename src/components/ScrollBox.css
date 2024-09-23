@@ -55,7 +55,6 @@
   box-sizing: border-box;
   scroll-snap-align: start;
   list-style: none;
-  /* width: 600px; */
   width: auto;
   min-height: 100%;
   filter: brightness(0.7);
