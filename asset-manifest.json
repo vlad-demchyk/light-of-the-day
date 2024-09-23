@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/light-of-the-day/static/css/main.78ac8d11.css",
-    "main.js": "/light-of-the-day/static/js/main.3214c07c.js",
+    "main.css": "/light-of-the-day/static/css/main.c65eac7e.css",
+    "main.js": "/light-of-the-day/static/js/main.e5a3983b.js",
     "static/css/764.95dda463.chunk.css": "/light-of-the-day/static/css/764.95dda463.chunk.css",
     "static/js/764.5550ed74.chunk.js": "/light-of-the-day/static/js/764.5550ed74.chunk.js",
     "static/js/453.137c2945.chunk.js": "/light-of-the-day/static/js/453.137c2945.chunk.js",
@@ -9,18 +9,20 @@
     "static/media/background_section1.png": "/light-of-the-day/static/media/background_section1.e76face03c286a3b9c3b.png",
     "static/media/otherground2.webp": "/light-of-the-day/static/media/otherground2.4ef5b7d0f726c2f815be.webp",
     "static/media/news-paper.png": "/light-of-the-day/static/media/news-paper.48d4dfe2a622b938d3a3.png",
+    "static/media/background_footer.png": "/light-of-the-day/static/media/background_footer.b301e0c9474f71f05484.png",
     "static/media/lighter.png": "/light-of-the-day/static/media/lighter.8e1c77026302d7d8cfb1.png",
+    "static/media/paper_for_footer.png": "/light-of-the-day/static/media/paper_for_footer.8f8e068c35d672b90320.png",
     "index.html": "/light-of-the-day/index.html",
     "static/media/icons8-menu.svg": "/light-of-the-day/static/media/icons8-menu.b13ce00dfd8ea3ade305088ebfb93f54.svg",
     "static/media/icons8-close.svg": "/light-of-the-day/static/media/icons8-close.54a0877299f7a9b5e687b189423412ed.svg",
-    "main.78ac8d11.css.map": "/light-of-the-day/static/css/main.78ac8d11.css.map",
-    "main.3214c07c.js.map": "/light-of-the-day/static/js/main.3214c07c.js.map",
+    "main.c65eac7e.css.map": "/light-of-the-day/static/css/main.c65eac7e.css.map",
+    "main.e5a3983b.js.map": "/light-of-the-day/static/js/main.e5a3983b.js.map",
     "764.95dda463.chunk.css.map": "/light-of-the-day/static/css/764.95dda463.chunk.css.map",
     "764.5550ed74.chunk.js.map": "/light-of-the-day/static/js/764.5550ed74.chunk.js.map",
     "453.137c2945.chunk.js.map": "/light-of-the-day/static/js/453.137c2945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78ac8d11.css",
-    "static/js/main.3214c07c.js"
+    "static/css/main.c65eac7e.css",
+    "static/js/main.e5a3983b.js"
   ]
 }
