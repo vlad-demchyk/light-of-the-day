@@ -1,9 +1,10 @@
-import "./SectionTwo.css";
-import Lighter from "./Lighter";
+import ButtonContactUs from "./ButtonContactUs";
 import HoverList from "./HoverList";
-import ScrollBox from "./ScrollBox";
-import ButtonContactUs from "./ButtonContactUs"
+import Lighter from "./Lighter";
 import OurTeam from "./OurTeam";
+import ScrollBox from "./ScrollBox";
+import Form from "./Form";
+import "./SectionTwo.css";
 
 const contactElements = [
   "Contact Us",
@@ -41,13 +42,12 @@ function Counter({ array }) {
 }
 
 function ContactTitle() {
-
   return (
     <div className="contact_container">
       <p>{contactElements[0].toLocaleUpperCase()}</p>
       <p>{contactElements[1].toLocaleUpperCase()}</p>
       <p>{contactElements[2].toLocaleUpperCase()}</p>
-      <ButtonContactUs props={"for_sec_two"}/>
+      <ButtonContactUs props={"for_sec_two"} />
     </div>
   );
 }
@@ -65,13 +65,21 @@ function SectionTwo() {
           <Counter array={counter}></Counter>
         </div>
       </div>
-      <Lighter/>
-      <HoverList/>
-      <ScrollBox/>
+      <Lighter />
+      <HoverList />
+      <ScrollBox />
       <ContactTitle></ContactTitle>
-      <OurTeam/>
+      <OurTeam />
+      <Form/>
     </div>
   );
 }
 
 export default SectionTwo;
+
+
+
+
+
+
+

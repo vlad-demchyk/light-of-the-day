@@ -1,6 +1,7 @@
 .carousel-container{
     position: relative;
     margin-top: 10%;
+    z-index: 0;
 }
 
 .carousel-container h3{
@@ -29,7 +30,9 @@
 
 .team-list{
     margin: 0;
+    position: relative;
     overflow-x: scroll;
+    z-index: 6;
     display: grid;
     gap: 5%;
     min-height: 32vw;

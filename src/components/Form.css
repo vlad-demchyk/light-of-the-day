@@ -1,0 +1,110 @@
+form *{
+    font-family: 'Monserrat', 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 16px
+}
+.form_container h3{
+    font-family: 'Georama', 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size:7vw;
+    color: #F44C06;
+}
+
+.form_container{
+ margin-top: 10%;
+margin-left: 41vw;
+height: max-content;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* дві колонки однакової ширини */
+    grid-template-rows: auto; /* рядки підлаштовуються під контент */
+    grid-template-areas: 
+      "item1 item2"
+      "item3 item3"
+      "item4 item4"
+      "item5 item5"
+      "item6 item6";
+    gap: 5%; /* відступ між елементами */
+    width: 60%;
+}
+input {
+    border: 0;
+    text-decoration: none;
+    height: 50px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.442);
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.467);
+}
+
+input:focus{
+    outline: none;
+    border-color: white;
+}
+
+input:nth-of-type(1) {
+    /* Стилізація для першого input (First name) */
+    grid-area: item1;
+
+  }
+  
+  input:nth-of-type(2) {
+    /* Стилізація для другого input (Last name) */
+    grid-area: item2;
+
+  }
+  
+  input:nth-of-type(3) {
+    /* Стилізація для третього input (Email) */
+    grid-area: item3;
+
+  }
+  
+  input:nth-of-type(4) {
+    /* Стилізація для четвертого input (Phone number) */
+    grid-area: item4;
+
+  }
+  
+  input:nth-of-type(5) {
+    /* Стилізація для п'ятого input (Message) */
+    height: 100px;
+    grid-area: item5;
+  }
+  input:nth-of-type(6) {
+    /* Стилізація для п'ятого input (Message) */
+    grid-area: item6;
+    border: 1px solid rgba(255, 255, 255, 0.485);
+    width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .form_container h3{
+        font-size: 11vw;
+    }
+    .form_container{
+    margin: 0;
+    padding-top: 10%;
+    padding-inline: 5%;
+    }
+    form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* дві колонки однакової ширини */
+        grid-template-rows: auto; /* рядки підлаштовуються під контент */
+        grid-template-areas: 
+          "item1 item1"
+          "item2 item2"
+          "item3 item3"
+          "item4 item4"
+          "item5 item5"
+          "item6 item6";
+        width: 100%;
+    }
+    input:nth-of-type(6) {
+    width: 100%;
+    }
+  }
