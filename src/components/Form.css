@@ -16,7 +16,16 @@ margin-left: 41vw;
 height: max-content;
 }
 
-form{
+.form_container form div input, .error {
+  border-color: red;
+  /* color: red; */
+}
+
+
+.form_container form div{
+  height: 50px;
+}
+.form_container form{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* дві колонки однакової ширини */
     grid-template-rows: auto; /* рядки підлаштовуються під контент */
@@ -29,55 +38,59 @@ form{
     gap: 5%; /* відступ між елементами */
     width: 60%;
 }
-input {
+.form_container form input {
     border: 0;
     text-decoration: none;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.442);
 }
-input::placeholder{
+.form_container form input::placeholder{
     color: rgba(255, 255, 255, 0.467);
 }
 
-input:focus{
+.form_container form input:focus{
     outline: none;
     border-color: white;
 }
 
-input:nth-of-type(1) {
+.form_container form div:nth-of-type(1) {
     /* Стилізація для першого input (First name) */
     grid-area: item1;
 
   }
   
-  input:nth-of-type(2) {
+  .form_container form div:nth-of-type(2) {
     /* Стилізація для другого input (Last name) */
     grid-area: item2;
 
   }
   
-  input:nth-of-type(3) {
+  .form_container form div:nth-of-type(3) {
     /* Стилізація для третього input (Email) */
     grid-area: item3;
 
   }
   
-  input:nth-of-type(4) {
+  .form_container form div:nth-of-type(4) {
     /* Стилізація для четвертого input (Phone number) */
     grid-area: item4;
-
   }
   
-  input:nth-of-type(5) {
+  .form_container form div:nth-of-type(5) {
     /* Стилізація для п'ятого input (Message) */
     height: 100px;
     grid-area: item5;
   }
-  input:nth-of-type(6) {
+  .form_container form div:nth-of-type(6) input {
+     border: 1px solid rgba(255, 255, 255, 0.485);
+
+  }
+  .form_container form div:nth-of-type(6) {
     /* Стилізація для п'ятого input (Message) */
     grid-area: item6;
-    border: 1px solid rgba(255, 255, 255, 0.485);
+    /* border: 1px solid rgba(255, 255, 255, 0.485); */
     width: 60%;
   }
 
@@ -104,7 +117,7 @@ input:nth-of-type(1) {
           "item6 item6";
         width: 100%;
     }
-    input:nth-of-type(6) {
+    .form_container form div:nth-of-type(6) {
     width: 100%;
     }
   }
