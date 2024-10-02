@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/light-of-the-day/static/css/main.c65eac7e.css",
-    "main.js": "/light-of-the-day/static/js/main.e5a3983b.js",
+    "main.css": "/light-of-the-day/static/css/main.439f52d7.css",
+    "main.js": "/light-of-the-day/static/js/main.57e3696d.js",
     "static/css/764.95dda463.chunk.css": "/light-of-the-day/static/css/764.95dda463.chunk.css",
     "static/js/764.5550ed74.chunk.js": "/light-of-the-day/static/js/764.5550ed74.chunk.js",
     "static/js/453.137c2945.chunk.js": "/light-of-the-day/static/js/453.137c2945.chunk.js",
@@ -15,14 +15,14 @@
     "index.html": "/light-of-the-day/index.html",
     "static/media/icons8-menu.svg": "/light-of-the-day/static/media/icons8-menu.b13ce00dfd8ea3ade305088ebfb93f54.svg",
     "static/media/icons8-close.svg": "/light-of-the-day/static/media/icons8-close.54a0877299f7a9b5e687b189423412ed.svg",
-    "main.c65eac7e.css.map": "/light-of-the-day/static/css/main.c65eac7e.css.map",
-    "main.e5a3983b.js.map": "/light-of-the-day/static/js/main.e5a3983b.js.map",
+    "main.439f52d7.css.map": "/light-of-the-day/static/css/main.439f52d7.css.map",
+    "main.57e3696d.js.map": "/light-of-the-day/static/js/main.57e3696d.js.map",
     "764.95dda463.chunk.css.map": "/light-of-the-day/static/css/764.95dda463.chunk.css.map",
     "764.5550ed74.chunk.js.map": "/light-of-the-day/static/js/764.5550ed74.chunk.js.map",
     "453.137c2945.chunk.js.map": "/light-of-the-day/static/js/453.137c2945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c65eac7e.css",
-    "static/js/main.e5a3983b.js"
+    "static/css/main.439f52d7.css",
+    "static/js/main.57e3696d.js"
   ]
 }
