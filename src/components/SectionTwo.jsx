@@ -5,6 +5,7 @@ import OurTeam from "./OurTeam";
 import ScrollBox from "./ScrollBox";
 import Form from "./Form";
 import "./SectionTwo.css";
+import { useEffect, useRef } from "react";
 
 const contactElements = [
   "Contact Us",
@@ -52,7 +53,26 @@ function ContactTitle() {
   );
 }
 
-function SectionTwo() {
+function SectionTwo({ setScrollRefs }) {
+
+  const hoverListRef = useRef(null);
+  const scrollBoxRef = useRef(null);
+  const ourTeamRef = useRef(null);
+  const contactTitleRef = useRef(null);
+
+  useEffect(setScrollRefs({
+    hoverListRef,
+    scrollBoxRef,
+    ourTeamRef,
+    contactTitleRef
+  }), [])
+  // setScrollRefs({
+  //   hoverListRef,
+  //   scrollBoxRef,
+  //   ourTeamRef,
+  //   contactTitleRef
+  // });
+
   return (
     <div className="section_2">
       <div className="full">
@@ -66,10 +86,10 @@ function SectionTwo() {
         </div>
       </div>
       <Lighter />
-      <HoverList />
-      <ScrollBox />
-      <ContactTitle></ContactTitle>
-      <OurTeam />
+      <div ref={hoverListRef}><HoverList /></div>
+      <div ref={scrollBoxRef}><ScrollBox /></div>
+      <div ref={ourTeamRef}><OurTeam /></div>
+      <div ref={contactTitleRef}><ContactTitle /></div>
       <Form/>
     </div>
   );
