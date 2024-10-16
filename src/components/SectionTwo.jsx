@@ -42,36 +42,35 @@ function Counter({ array }) {
   );
 }
 
-function ContactTitle() {
+function ContactTitle({scrollRefs}) {
   return (
     <div className="contact_container">
       <p>{contactElements[0].toLocaleUpperCase()}</p>
       <p>{contactElements[1].toLocaleUpperCase()}</p>
       <p>{contactElements[2].toLocaleUpperCase()}</p>
-      <ButtonContactUs props={"for_sec_two"} />
+      <ButtonContactUs scrollRefs={scrollRefs} props={"for_sec_two"} />
     </div>
   );
 }
 
-function SectionTwo({ setScrollRefs }) {
+function SectionTwo({setScrollRefs, scrollRefs}) {
 
   const hoverListRef = useRef(null);
   const scrollBoxRef = useRef(null);
   const ourTeamRef = useRef(null);
-  const contactTitleRef = useRef(null);
+  const contactUsRef = useRef(null);
 
-  useEffect(setScrollRefs({
-    hoverListRef,
-    scrollBoxRef,
-    ourTeamRef,
-    contactTitleRef
-  }), [])
-  // setScrollRefs({
-  //   hoverListRef,
-  //   scrollBoxRef,
-  //   ourTeamRef,
-  //   contactTitleRef
-  // });
+
+  useEffect(() => {
+      setScrollRefs({
+        hoverListRef,
+        scrollBoxRef,
+        ourTeamRef,
+        contactUsRef,
+      });
+  }, [setScrollRefs]);
+
+
 
   return (
     <div className="section_2">
@@ -86,11 +85,11 @@ function SectionTwo({ setScrollRefs }) {
         </div>
       </div>
       <Lighter />
-      <div ref={hoverListRef}><HoverList /></div>
-      <div ref={scrollBoxRef}><ScrollBox /></div>
-      <div ref={ourTeamRef}><OurTeam /></div>
-      <div ref={contactTitleRef}><ContactTitle /></div>
-      <Form/>
+      <div ref={hoverListRef}><HoverList/></div>
+      <div ref={scrollBoxRef}><ScrollBox/></div>
+      <ContactTitle scrollRefs={scrollRefs}/>
+      <div ref={ourTeamRef}><OurTeam/></div>
+      <div ref={contactUsRef}><Form/></div>
     </div>
   );
 }

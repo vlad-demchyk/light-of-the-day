@@ -7,13 +7,13 @@ import ButtonContactUs from './ButtonContactUs'
 import newsPaper from '../background/news-paper.png'
 
 
-function SectionOne() {
+function SectionOne({scrollRefs}) {
 
 
   return (
     <div className="section_1">
         <TitleText></TitleText>
-        <ButtonContactUs props={"for_sec_one"}/>
+        <ButtonContactUs scrollRefs={scrollRefs} props={"for_sec_one"}/>
         <img className='news-paper no-interaction' src={newsPaper} alt='connectOfSection'/>
      </div>
   );

@@ -1,3 +1,10 @@
+.image_phone{
+  height: 30vw;
+  position: absolute;
+  bottom: -15vw;
+  left: 0;
+}
+
 form *{
     font-family: 'Monserrat', 'Times New Roman', Times, serif;
     font-weight: 200;
@@ -11,15 +18,14 @@ form *{
 }
 
 .form_container{
- margin-top: 10%;
-margin-left: 41vw;
+  margin-top: 10%;
+  padding-bottom: 200px;
+padding-left: 41vw;
 height: max-content;
+position: relative;
 }
 
-.form_container form div input, .error {
-  border-color: red;
-  /* color: red; */
-}
+
 
 
 .form_container form div{
@@ -27,8 +33,7 @@ height: max-content;
 }
 .form_container form{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* дві колонки однакової ширини */
-    grid-template-rows: auto; /* рядки підлаштовуються під контент */
+    grid-template-columns: repeat(2, 1fr); 
     grid-template-areas: 
       "item1 item2"
       "item3 item3"
@@ -38,7 +43,7 @@ height: max-content;
     gap: 5%; /* відступ між елементами */
     width: 60%;
 }
-.form_container form input {
+.form_container form div input {
     border: 0;
     text-decoration: none;
     width: 100%;
@@ -54,6 +59,10 @@ height: max-content;
     outline: none;
     border-color: white;
 }
+
+.form_container form div input.error {
+  border-color: red;
+} 
 
 .form_container form div:nth-of-type(1) {
     /* Стилізація для першого input (First name) */
@@ -90,7 +99,6 @@ height: max-content;
   .form_container form div:nth-of-type(6) {
     /* Стилізація для п'ятого input (Message) */
     grid-area: item6;
-    /* border: 1px solid rgba(255, 255, 255, 0.485); */
     width: 60%;
   }
 
@@ -104,13 +112,13 @@ height: max-content;
     padding-top: 10%;
     padding-inline: 5%;
     }
-    form{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* дві колонки однакової ширини */
-        grid-template-rows: auto; /* рядки підлаштовуються під контент */
+    .form_container form{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto;
         grid-template-areas: 
-          "item1 item1"
-          "item2 item2"
+        "item1 item1"
+        "item2 item2"
           "item3 item3"
           "item4 item4"
           "item5 item5"

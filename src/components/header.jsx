@@ -4,26 +4,16 @@ import opened from "../icons/icons8-menu.svg";
 import closed from "../icons/icons8-close.svg";
 import MenuComponent from "./MenuComponent";
 import { useState, useEffect } from "react";
-import SectionTwo from "./SectionTwo";
 
-function Header() {
+function Header({scrollRefs}) {
   const [isMenuOpened, setMenuOpen] = useState(false);
-  const [scrollRefs, setScrollRefs] = useState({});
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState);
   };
 
   useEffect(() => {
-    // const burger = document.querySelector('.mobile-nav-toggle');
     const mainBody = document.querySelector(".main_css");
-    // if (isMenuOpened) {
-    //   burger.style.backgroundImage = `url(${closed})`; // Меню відкрите, показати іконку закриття
-
-    // } else {
-    //   burger.style.backgroundImage = `url(${opened})`; // Меню закрите, показати іконку відкриття
-    // }
-
     // Закриття меню при кліку за межами
     const closeMenuOnClickOutside = (event) => {
       if (mainBody.contains(event.target)) {
@@ -56,9 +46,10 @@ function Header() {
           style={{ paddingRight: "5%" }}
           state={isMenuOpened}
           scrollRefs={scrollRefs}
+          setMenuOpen={setMenuOpen}
         />
       </div>
-      <SectionTwo setScrollRefs={setScrollRefs} />
+      {/* <SectionTwo setScrollRefs={setScrollRefs} /> */}
     </div>
   );
 }

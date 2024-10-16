@@ -1,9 +1,19 @@
 import './ButtonContactUs.css';
 
-function ButtonContactUs({props}) {
+function ButtonContactUs({ props, scrollRefs }) {
+  const scrollToRef = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault(); // Запобігаємо переходу за посиланням
+    scrollToRef(scrollRefs.contactUsRef);
+  };
   return (
     
-    <a href='https://google.com' className={`circle-container ${props}`}>
+    <a href='#' onClick={handleClick} className={`circle-container ${props}`}>
       <span className='pseudo_el'></span>
       <svg viewBox="0 0 200 200" className="circle-text">
         <defs>

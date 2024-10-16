@@ -1,158 +1,169 @@
 import "./Form.css";
 import { useState } from "react";
+import phone from "../background/phone.png";
 
+const sendMail = (event, data) => {
+  event.preventDefault();
+
+  const form = event.target.form;
+  let isValid=true;
+
+  Object.entries(data).forEach(([inputName]) => {
+    const inputField = form.querySelector(`[name="${inputName}"]`);
+
+    if (!validate(inputField)) {
+      isValid = false;
+    }
+  });
+
+  if (isValid) {
+    console.log("Form submitted", data);
+    // Тут можна виконати додаткові дії, наприклад, відправку форми
+  } else {
+    console.log("Form contains errors");
+  }
+};
+
+ // Функція для додавання класу помилки
+ const setError = (input, textMessage) => {
+  const parentDiv = input.closest(".input_field");
+  const errorTxt = parentDiv.querySelector(".error_text");
+  input.classList.add("error");
+  errorTxt.innerHTML = textMessage;
+};
+
+// Функція для видалення класу помилки
+const removeError = (input) => {
+  const parentDiv = input.closest(".input_field");
+  const errorTxt = parentDiv.querySelector(".error_text");
+  input.classList.remove("error");
+  errorTxt.innerHTML = "";
+};
+
+const validators = {
+  email: (value) => /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/.test(value) || "Невірний формат email",
+  phone: (value) => /^\d{6,}$/.test(value) || "Телефон повинен містити мінімум 6 цифр",
+  message: (value) => value.length >= 10 || "Повідомлення повинно містити мінімум 10 символів",
+  fName: (value) => value.length > 0 || "Ім'я не може бути порожнім",
+  lName: (value) => value.length > 0 || "Прізвище не може бути порожнім"
+};
+
+
+const validate = (input) => {
+  const value = input.value;
+  const inputName = input.name;
+  const error = validators[inputName](value);
+  if (error !== true) {
+    setError(input, error);
+    return false;
+  }
+  removeError(input);
+  return true;
+};
 
 
 function Form() {
-    const dataState = {
-        fname: "",
-        lname: "",
-        email: "",
-        phone: "",
-        message: "",
-      };
+  const dataState = {
+    fName: "",
+    lName: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
 
   const [value, setValue] = useState(dataState);
 
   const handleChange = (e) => {
     const target = e.target;
-    const n = target.name;
-    const v = target.value;
-    const newvalue = { ...value, [n]: v }
-  setValue(newvalue)
+    const name = target.name;
+    const val = target.value;
+    const newValue = { ...value, [name]: val };
+    setValue(newValue);
   };
-
-  const validate = (event, data) => {
-    const form = event.target.form;
-    const { fname, lname, email, phone, message } = data;
-  
-    const emailRegEx = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/;  // Перевірка email
-    const minLenghtRegEx = /^.{10,}$/;  // Мінімум 10 символів
-    const minNumbRegEx = /^\d{6,}$/;    // Мінімум 6 цифр
-  
-    // Функція для додавання класу помилки
-    const setError = (inputName, textMessage) => {
-      const input = form.querySelector(`[name=${inputName}]`);
-      input.classList.add("error");
-
-
-    };
-  
-    // Функція для видалення класу помилки
-    const removeError = (inputName) => {
-      const input = form.querySelector(`[name=${inputName}]`);
-      input.classList.remove("error");
-
-    };
-  
-    // Очищення всіх попередніх помилок
-    ["fname", "lname", "email", "phone", "message"].forEach(removeError);
-  
-    // Перевірка і повідомлення про проблеми
-    if (fname === "") {
-      setError("fname", "Поле 'Ім'я' порожнє");
-    }
-    if (lname === "") {
-      setError("lname", "Поле 'Прізвище' порожнє");
-    }
-    if (email === "") {
-      setError("email", "Поле 'Email' порожнє");
-    } else if (!emailRegEx.test(email)) {
-      setError("email", "Невірний формат email");
-    }
-  
-    if (phone === "") {
-      setError("phone", "Поле 'Телефон' порожнє");
-    } else if (!minNumbRegEx.test(phone)) {
-      setError("phone", "Телефон повинен містити мінімум 6 цифр");
-    }
-  
-    if (message === "") {
-      setError("message","Поле 'Повідомлення' порожнє");
-    } else if (!minLenghtRegEx.test(message)) {
-      setError("message", "Повідомлення повинно містити мінімум 10 символів");
-    }
-  
-    // Якщо всі перевірки пройдено успішно
-    if (
-      fname !== "" &&
-      lname !== "" &&
-      emailRegEx.test(email) &&
-      minNumbRegEx.test(phone) &&
-      minLenghtRegEx.test(message)
-    ) {
-      console.log("testGood");
-    }
-  };
-  
-  
-
-  const sendMail = (event, data)=>{
-    event.preventDefault();
-    validate(event, data)
-  }
-
 
   return (
     <div className="form_container">
       <h3>{"Get in Touch".toUpperCase()}</h3>
       <form action="">
-        <div>
+        <div className="input_field">
           <input
             onChange={handleChange}
+            // onMouseLeave={(event) => {
+            //   validate(event.target);
+            // }}
             type="text"
-            id="fname"
-            name="fname"
-            value={value.fname}
+            id="fName"
+            name="fName"
+            value={value.fName}
             placeholder="First name"
           />
-          </div>
-          <div>
+          <p className="error_text"></p>
+        </div>
+        <div className="input_field">
           <input
             onChange={handleChange}
+            // onMouseLeave={(event) => {
+            //   validate(event.target);
+            // }}
             type="text"
-            id="lname"
-            name="lname"
-            value={value.lname}
+            id="lName"
+            name="lName"
+            value={value.lName}
             placeholder="Last name"
-
           />
-          </div>
-          <div>
+          <p className="error_text"></p>
+        </div>
+        <div className="input_field">
           <input
             onChange={handleChange}
+            // onMouseLeave={(event) => {
+            //   validate(event.target);
+            // }}
             type="email"
             id="email"
             name="email"
             value={value.email}
             placeholder="Email"
-
           />
-          </div>
-          <div>
+          <p className="error_text"></p>
+        </div>
+        <div className="input_field">
           <input
             onChange={handleChange}
+            // onMouseLeave={(event) => {
+            //   validate(event.target);
+            // }}
             type="number"
             id="phone"
             name="phone"
             value={value.phone}
             placeholder="Phone"
           />
-          </div>
-          <div>
+          <p className="error_text"></p>
+        </div>
+        <div className="input_field">
           <input
             onChange={handleChange}
+            // onMouseLeave={(event) => {
+            //   validate(event.target);
+            // }}
             type="text"
             id="message"
             name="message"
             value={value.message}
             placeholder="Message"
           />
-          </div>
-          <div>
-          <input onClick={(event)=>sendMail(event, value)} type="button" value="Submit" />
-          </div>
+          <p className="error_text"></p>
+        </div>
+        <div>
+          <input
+            onClick={(event) => sendMail(event, value)}
+            type="button"
+            value="Submit"
+          />
+        </div>
       </form>
+      <img src={phone} className="image_phone" />
     </div>
   );
 }
