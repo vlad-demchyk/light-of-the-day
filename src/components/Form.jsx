@@ -140,8 +140,8 @@ return true
         type="number"
         id="number"
         name="number"
-        value={formData.number}
-        onChange={handleInputChange}
+        // value={formData.number}
+        // onChange={handleInputChange}
       />
       {formErrors.password && <p className="error">{formErrors.password}</p>}
     </div>
