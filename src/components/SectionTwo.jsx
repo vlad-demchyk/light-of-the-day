@@ -3,7 +3,7 @@ import HoverList from "./HoverList";
 import Lighter from "./Lighter";
 import OurTeam from "./OurTeam";
 import ScrollBox from "./ScrollBox";
-import Form from "./Form";
+import Form from "./copy.form";
 import "./SectionTwo.css";
 import { useEffect, useRef } from "react";
 
