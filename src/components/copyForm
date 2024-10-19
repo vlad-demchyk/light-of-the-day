@@ -1,6 +1,6 @@
-// // import "./Form.css";
-// // import { useState } from "react";
-// // import phone from "../background/phone.png";
+// import "./Form.css";
+// import { useState } from "react";
+// import phone from "../background/phone.png";
 
 // const sendMail = (event, data) => {
 //   event.preventDefault();
@@ -168,6 +168,6 @@
 //   );
 // }
 
-// // export default Form;
+// export default Form;
 
 

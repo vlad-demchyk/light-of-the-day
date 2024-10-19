@@ -2,7 +2,7 @@ import "./Form.css";
 import { useState } from "react";
 import phone from "../background/phone.png";
 
-const MyForm = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     fName: ' ',
     lName: ' ',
@@ -19,6 +19,10 @@ const MyForm = () => {
     message: ' ',
   });
 
+  function isValidEmail(value){
+return true
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -30,14 +34,18 @@ const MyForm = () => {
       console.log('Form submitted successfully!');
       // Reset the form
       setFormData({
-        name: ' ',
+        fName: ' ',
+        lName: ' ',
         email: ' ',
-        password: ' ',
+        number: ' ',
+        message: ' ',
       });
       setFormErrors({
-        name: ' ',
+        fName: ' ',
+        lName: ' ',
         email: ' ',
-        password: ' ',
+        number: ' ',
+        message: ' ',
       });
     } else {
       console.log('Form contains validation errors.');
@@ -51,8 +59,13 @@ const MyForm = () => {
       ...prevState,
       [name]: value,
     }));
-  };
-  if (name === 'name' && value.length < 3) {
+  // };
+  if (name === 'fName' && value.length < 3) {
+    setFormErrors((prevState) => ({
+      ...prevState,
+      name: 'Name must be at least 3 characters long.',
+    }));
+  } else if (name === 'lName' && value.length < 3) {
     setFormErrors((prevState) => ({
       ...prevState,
       name: 'Name must be at least 3 characters long.',
@@ -62,10 +75,15 @@ const MyForm = () => {
       ...prevState,
       email: 'Please enter a valid email address.',
     }));
-  } else if (name === 'password' && value.length < 8) {
+  } else if (name === 'number' && value.length < 8) {
     setFormErrors((prevState) => ({
       ...prevState,
-      password: 'Password must be at least 8 characters long.',
+      password: 'Number must be at least 8 characters long.',
+    }));
+  } else if (name === 'message' && value.length < 8) {
+    setFormErrors((prevState) => ({
+      ...prevState,
+      password: 'Message must be at least 8 characters long.',
     }));
   } else {
     setFormErrors((prevState) => ({
@@ -73,6 +91,7 @@ const MyForm = () => {
       [name]: '', // Reset error message
     }));
   }
+}
 
   // ...
 
