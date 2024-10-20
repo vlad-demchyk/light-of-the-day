@@ -86,11 +86,12 @@ form * {
   height: 100px;
   grid-area: item5;
 }
-.form_container form div:nth-of-type(6) input {
+.form_container form .submit_button {
   border: 1px solid rgba(255, 255, 255, 0.485);
-}
-.form_container form div:nth-of-type(6) {
-  /* Стилізація для п'ятого input (Message) */
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
+  height: 50px;
   grid-area: item6;
   width: 60%;
 }
@@ -117,7 +118,7 @@ form * {
       "item6 item6";
     width: 100%;
   }
-  .form_container form div:nth-of-type(6) {
+  .form_container form .submit_button {
     width: 100%;
   }
 }

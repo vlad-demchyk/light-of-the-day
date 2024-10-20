@@ -4,19 +4,19 @@ import phone from "../background/phone.png";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    fName: ' ',
-    lName: ' ',
-    email: ' ',
-    number: ' ',
-    message: ' ',
+    fName: '',
+    lName: '',
+    email: '',
+    number: '',
+    message: '',
   });
 
   const [formErrors, setFormErrors] = useState({
-    fName: ' ',
-    lName: ' ',
-    email: ' ',
-    number: ' ',
-    message: ' ',
+    fName: '',
+    lName: '',
+    email: '',
+    number: '',
+    message: '',
   });
 
   function isValidEmail(value){
@@ -27,25 +27,25 @@ return true
     e.preventDefault();
 
     // Final validation check
-    const isFormValid = Object.values(formErrors).every((error) => error === ' ');
+    const isFormValid = Object.values(formErrors).every((error) => error === '');
 
     if (isFormValid) {
       // Form submission logic
       console.log('Form submitted successfully!');
       // Reset the form
       setFormData({
-        fName: ' ',
-        lName: ' ',
-        email: ' ',
-        number: ' ',
-        message: ' ',
+        fName: '',
+        lName: '',
+        email: '',
+        number: '',
+        message: '',
       });
       setFormErrors({
-        fName: ' ',
-        lName: ' ',
-        email: ' ',
-        number: ' ',
-        message: ' ',
+        fName: '',
+        lName: '',
+        email: '',
+        number: '',
+        message: '',
       });
     } else {
       console.log('Form contains validation errors.');
@@ -100,7 +100,7 @@ return true
       <h3>{"Get in Touch".toUpperCase()}</h3>
     <form onSubmit={handleSubmit}>
     <div className="input_field">
-      <label htmlFor="fName">First Name:</label>
+      {/* <label htmlFor="fName">First Name:</label> */}
       <input
         type="text"
         id="fName"
@@ -112,7 +112,7 @@ return true
       {formErrors.fName && <p className="error">{formErrors.name}</p>}
     </div>
     <div className="input_field">
-      <label htmlFor="lName">Last Name:</label>
+      {/* <label htmlFor="lName">Last Name:</label> */}
       <input
         type="text"
         id="lName"
@@ -126,7 +126,7 @@ return true
     </div>
 
     <div className="input_field">
-      <label htmlFor="email">Email:</label>
+      {/* <label htmlFor="email">Email:</label> */}
       <input
         type="email"
         id="email"
@@ -140,7 +140,7 @@ return true
     </div>
 
     <div className="input_field">
-      <label htmlFor="number">Number:</label>
+      {/* <label htmlFor="number">Number:</label> */}
       <input
         type="number"
         id="number"
@@ -153,7 +153,7 @@ return true
       {formErrors.password && <p className="error">{formErrors.password}</p>}
     </div>
     <div className="input_field">
-      <label htmlFor="message">Message:</label>
+      {/* <label htmlFor="message">Message:</label> */}
       <input
         type="text"
         id="message"
@@ -166,7 +166,7 @@ return true
       {formErrors.password && <p className="error">{formErrors.password}</p>}
     </div>
 
-    <button type="submit">Submit</button>
+    <button className="submit_button" type="submit">Submit</button>
   </form>
   <img src={phone} className="image_phone" />
   </div>
