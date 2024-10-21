@@ -4,6 +4,16 @@
   bottom: -15vw;
   left: 0;
 }
+.set_error_field{
+  border-color: #ff00008e !important;
+  /* border: 1px solid red !important; */
+}
+.set_form_error_text{
+  font-size: 14px;
+  color: #ff00008e;
+  font-weight: 100;
+  
+}
 
 form * {
   font-family: "Monserrat", "Times New Roman", Times, serif;
