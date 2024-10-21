@@ -5,12 +5,13 @@ flex-direction: column;
 width: 100%;
 /* z-index: 3; */
 margin-top: 10%;
+margin-bottom: 10%;
 
 }
 
 .list div{
   border-top: 0.5px solid #767676;
-  color: #E5E5E5;
+  color: #838383;
   display: grid;
   grid-template-columns: 1fr 63% ;
   position: relative;
@@ -31,7 +32,8 @@ margin-top: 10%;
 }
 .list p{
     font-size: 27px;
-    font-weight: 200;
+    font-weight: 100;
+    color: #767676;
 }
 
 .mainTitle{
@@ -71,6 +73,7 @@ margin-top: 10%;
   }
   .list div:hover p {
     padding-left: 13%;
+    color: #F44C06;
   }
   .list div:hover .subTitle {
     display: block !important;
@@ -111,7 +114,8 @@ margin-top: 10%;
         @media screen and (max-width: 768px) {
      
           .list p {
-            font-size: 1.2em;
+            /* font-size: 1.2em; */
+            font-size: 2.5vw;
             font-weight: 100;
           } 
 
@@ -130,12 +134,17 @@ margin-top: 10%;
           .list div:hover .mainTitle, .list div:hover p {
             font-weight: 600;
           }
+
+          .list div{
+            grid-template-columns: 1fr 68% ;
+        
+          }
         }
         @media screen and (max-width: 650px) {
          
           .list p {
-            font-weight: 100;
-            font-size: 1.2em;
+            font-weight: 200;
+            font-size: 2.7vw;
           } 
 
           .mainTitle{

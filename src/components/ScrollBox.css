@@ -15,6 +15,7 @@
   width: 50%;
   margin-left: 37vw;
   /* margin-right: 10%; */
+  margin-bottom: 5%;
 
 }
 
@@ -31,7 +32,7 @@
   grid-auto-columns: calc(100% / 3);
   /* margin-left: 5%; */
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -82,7 +83,7 @@
   font-weight: 200;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  display: none;
+  display: block;
 }
 
 .card .subtitle {
@@ -111,7 +112,7 @@ display: block;
 
 .card:focus .badge {
   font-weight: 600;
-  /* font-size: 2.5rem; */
+  /* font-size: 4.5vw; */
 }
 
 .card:hover {
@@ -165,13 +166,6 @@ display: block;
 }
 
 @media screen and (min-width: 2000px) {
-  /* .carousel {
-    grid-auto-columns: calc(100% / 4);
-  } */
-  
-  /* .slide-button {
-    top: 40vw;
-  } */
 }
 
 @media screen and (max-width: 1600px) {
@@ -179,11 +173,6 @@ display: block;
   .carousel {
     grid-auto-columns: calc(100% / 3); /* Три повних, четвертий частково */
   }
-
-  
-  /* .slide-button {
-    top: 45vw;
-  } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -218,14 +207,18 @@ display: block;
     aspect-ratio: 3/3;
   }
 
+  .title{
+    margin-left: 32vw;
+  
+  
+  }
+
   .subtitle{
     grid-template-columns: none !important;
     grid-template-rows: repeat(2, 1fr);
   }
   .subtitle p{
-    /* font-size: 1.4em; */
     font-size: 3vw;
-    /* text-align: justify; */
   }
 
   .slide-button {
@@ -234,18 +227,15 @@ font-size: 2.2em;
 }
 
 .card .badge {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 .card{
-  /* margin-left: 0; */
   scroll-snap-align: end !important;
 }
 }
 
 @media screen and (max-width: 450px) {
-  .carousel {
-    grid-auto-columns: calc(100% / 1.4); /* Два повних слайда */
-  }
+  .carousel {}
   .card .img img {
     aspect-ratio: 3/3;
   }
@@ -260,7 +250,7 @@ font-size: 2.2em;
   }
   .subtitle p{
     font-size: 1em;
-    font-size: 3.3vw;
+    font-size: 3.1vw;
     /* text-align: justify; */
     font-weight: 100;
   }

@@ -37,6 +37,7 @@
 }
 
 
+
 .sub_main_text2 {
  float: right;
 }
@@ -88,6 +89,10 @@
             /* font-size: 10.5vw; */
             font-weight: 700;
         }
+        .title_class_light :nth-of-type(2){
+            /* font-size: 4.1em */
+            margin: 0 8%;
+        }
       }
       /* @media screen and (max-width: 600px) {
      
@@ -117,18 +122,10 @@ position: relative;
       } */
       @media screen and (max-width: 450px){
         .lighter_Container {
-            /* top: 7%;
-            height: max-content; */
+
         } 
         .sub_main_text,
         .sub_main_text2 {
-            /* font-size: 3.2rem; */
-            /* font-weight: 700; */
+    
         }
       }
-      /* @media screen and (max-width: 450px){
-        .sub_main_text,
-        .sub_main_text2 {
-            font-size: 2.5em;
-        }
-      } */

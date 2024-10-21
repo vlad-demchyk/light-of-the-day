@@ -218,8 +218,9 @@ grid-template-rows: min-content min-content;
             .contact_container p:nth-child(2){
          
             font-size: 5vw;
-            letter-spacing: normal;
-            text-indent: 32vw;
+            /* letter-spacing: normal; */
+            letter-spacing: 2.3px;
+            text-indent: 25vw;
             text-align: left;
             }
 
@@ -242,10 +243,6 @@ grid-template-rows: min-content min-content;
             letter-spacing: normal;
             text-align:start;
             display: block;
-            }
-            .contact_container p:nth-child(2){
-                font-size: 7vw;
-                text-indent: 30vw;
             }
 
             .counter div p:nth-of-type(1){

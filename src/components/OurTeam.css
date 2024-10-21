@@ -38,13 +38,12 @@
     min-height: 32vw;
     overflow-y: hidden;
     padding-left: 5%;
-    /* height: max-content; */
     align-items: center;
     grid-auto-flow: column;
     grid-auto-columns: calc(100%/4);
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     scrollbar-width: none;
+    scroll-snap-align: center;
 }
 .team-list::-webkit-scrollbar{
     display: none;
@@ -58,10 +57,10 @@
     display: grid;
     justify-items: center;
     grid-auto-flow: row;
-    height: 100%;
+    /* height: 650px; */
+    height: 34vw;
     align-content: center;
     grid-template-rows: min-content  auto;
-    /* gap: 1vw; */
    cursor: pointer;
  }
  
@@ -184,21 +183,25 @@ animation: fadeIn 0.5s ease;
 
   @media screen and (max-width: 1280px) {
     .name p{
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 
     .description-text{
-        font-size: 2.0vw;
+        font-size: 1.8vw;
         width: 95%;
+    }
+    .card-item-team{
+        height: 50vw;
+      
     }
 
     .team-list{
-        grid-auto-columns: calc(100%/2);
+        grid-auto-columns: calc(100%/3);
    
     }
 
     .name span{
-        font-size: 3vw;
+        font-size: 2vw;
     }
     
   }
@@ -213,8 +216,8 @@ animation: fadeIn 0.5s ease;
             font-size: 9.3vw;
             /* padding-inline: 5%; */
             display: inline-block;
-            text-indent: -25%;
-            padding-left: 25%;
+            text-indent: -30%;
+            padding-left: 30%;
         }
         .team-wrapper{
             padding-top: 50px;
@@ -233,6 +236,7 @@ animation: fadeIn 0.5s ease;
         .card-item-team{
             background-color: white;
             z-index: 5;
+            height: 100%;
             filter: brightness(0.5);
             align-content: space-between;
         }

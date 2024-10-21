@@ -22,8 +22,34 @@
     display: none;
 }
 
-/* .background_footer{
+.logo_footer{
+    position: absolute;
+    bottom: 35%;
+}
+
+.menu_footer{
+    position: absolute;
+    right: 5%;
+    bottom: 65%;
+}
+
+.sub_for_footer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 20px;
+    bottom: 35%;
+    right: 5%;  
+    color: white;
+}
+
+.form_footer{
+    display: flex;
     width: 100%;
-    height: 100%;
-    position: relative;
-} */
+    height: 50px;
+}
+
+.contacts_footer{
+    position: absolute;
+    bottom: 15%;
+}

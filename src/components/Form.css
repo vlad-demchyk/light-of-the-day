@@ -107,6 +107,12 @@ form * {
 }
 
 @media screen and (max-width: 768px) {
+  .image_phone {
+    /* min-height: 100px; */
+    right: 0;
+    bottom: -20vw;
+  }
+
   .form_container h3 {
     font-size: 11vw;
   }
@@ -130,5 +136,11 @@ form * {
   }
   .form_container form .submit_button {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .image_phone {
+    bottom: -25vw;
   }
 }
