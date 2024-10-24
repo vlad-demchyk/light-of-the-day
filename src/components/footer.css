@@ -3,11 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     background-color: transparent;
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
+}
+
+
+.content_inside{
+    height: 500px;
 }
 
 .footer_container{
     position: relative;
-    height: 500px;
+    height: max-content;
     padding-inline: 5%;
     background-color: transparent;
     background-image: 
@@ -25,12 +31,13 @@
 .logo_footer{
     position: absolute;
     bottom: 35%;
+    height: 50px;
 }
 
 .menu_footer{
     position: absolute;
     right: 5%;
-    bottom: 65%;
+    bottom: 55%;
 }
 
 .sub_for_footer{
@@ -38,18 +45,117 @@
     flex-direction: column;
     position: absolute;
     gap: 20px;
-    bottom: 35%;
+    bottom: 25%;
     right: 5%;  
     color: white;
 }
 
+.form_footer input{ 
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: none;
+    padding-left: 5%;
+}
+.form_footer button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
 .form_footer{
-    display: flex;
+    display: grid;
+    grid-template-columns: 65% 1fr;
     width: 100%;
+    height: 45px;
+}
+
+a{
+    text-decoration: none; /* Вимикає підкреслення */
+    color: white;  
+    font-weight: 100;
+}
+.contacts_footer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 5%;
+    width: 250px;
+}
+
+
+
+
+.social_links{
+    display: flex; /* Виставляємо елементи в лінію */
+    justify-content: space-between; /* Розподіляємо елементи по горизонталі */
+}
+
+.social_links img {
     height: 50px;
 }
 
-.contacts_footer{
+.text_for_submit, .text_for_submit span{
+    font-size: 16px;
+    /* font-size: 1vw; */
+    font-weight: 500;
+}
+
+.privacy_policy{
+display: flex;
+width: max-content;
+gap: 50px;
+position: relative;
+justify-content: space-between;
+}
+
+.privacy_policy::after{
+    content: '';
     position: absolute;
-    bottom: 15%;
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .content_inside{
+        height: 700px;
+    }
+
+    .logo_footer{
+      top:30%;
+        
+    }
+    .contacts_footer{
+        position: absolute;
+        bottom: 40%;
+    }
+    
+
+    .social_links img{
+        margin-top: 5%;
+    }
+
+
+    .sub_for_footer{
+        width: 90%;
+        bottom: 15%;
+    }
+    .form_footer button{
+        background-color: #F44C06;
+        border: none;
+    }
+
+    .privacy_policy::after{
+        content: none;
+        display: none;
+    }
+    
+    .privacy_policy{
+        width: 100%;
+        text-decoration: underline;
+    }
 }

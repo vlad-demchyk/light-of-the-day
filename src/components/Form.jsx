@@ -30,6 +30,19 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // const isFormEmpty = Object.values(formData).every(
+    //   (field) => field === "" );
+
+    // if(isFormEmpty){
+    //   setFormErrors({
+    //     fName: "",
+    //     lName: "",
+    //     email: "",
+    //     number: "",
+    //     message: "",
+    //   });
+    // }
 
     // Final validation check
     const isFormValid = Object.values(formErrors).every(
@@ -169,7 +182,7 @@ const Form = () => {
         </div>
         <div className="input_field">
           {/* <label htmlFor="message">Message:</label> */}
-          <input
+          <textarea
             type="text"
             id="message"
             name="message"
