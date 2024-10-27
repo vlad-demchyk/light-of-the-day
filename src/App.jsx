@@ -14,7 +14,7 @@ function App() {
     <div className="main_css">
       <SectionOne scrollRefs={scrollRefs}></SectionOne>
       <SectionTwo setScrollRefs={setScrollRefs} scrollRefs={scrollRefs} ></SectionTwo>
-      <Footer></Footer>
+      <Footer scrollRefs={scrollRefs}></Footer>
    </div>
    </>
   );

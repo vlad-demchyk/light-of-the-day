@@ -50,8 +50,8 @@ function startLogicScroll(){
   // const wrapper = document.querySelector(".wrapper")
   const carousel = document.querySelector(".carousel")
     const arrowBtns = document.querySelectorAll(".slide-button")
-    const firstCardWidth = document.querySelectorAll(".card")[1].offsetWidth;
-    console.log(`Перша ${firstCardWidth}`)
+    // const firstCardWidth = document.querySelectorAll(".card")[1].offsetWidth;
+    const firstCardWidth = document.querySelector(".card").offsetWidth;
  
 
     const cards = document.querySelectorAll(".card");
@@ -59,20 +59,13 @@ function startLogicScroll(){
   
     if (window.innerWidth < 768) {
       if (secondCard) {
-        // setTimeout(() => {
           secondCard.focus();
           carousel.scrollLeft = secondCard.offsetWidth;
-          console.log(`Друга ${secondCard.offsetWidth}`)
           window.scrollTo(0, 0);
-        // }, 10)
       }
     } else {
-      // setTimeout(()=>{
         secondCard.focus();
-        console.log(`Друга ${secondCard.offsetWidth}`)
-
         window.scrollTo(0, 0);
-      // }, 10)
     }
     
     let isDragging = false, startX, startScrollLeft;
@@ -122,6 +115,11 @@ function startLogicScroll(){
         carousel.classList.remove('dragging')
     }
 
+    const dragging = (e)=>{
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    }
+
     // const autoPlay = ()=>{
     //   if(window.innerWidth <768) return
     //   timeoutID = setTimeout(()=> carousel.scrollLeft = firstCardWidth, 2500)
@@ -129,10 +127,6 @@ function startLogicScroll(){
     
     // autoPlay()
 
-    const dragging = (e)=>{
-        if (!isDragging) return;
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-    }
     ///////////////////////
 
     // if the carousel is at the beginning, scroll to the end
@@ -157,13 +151,13 @@ function startLogicScroll(){
     // if(wrapper.matches(":hover"))autoPlay()
     // }
 
-    ///////////////////////////
-    carousel.addEventListener('mousedown', dragStart)
-    carousel.addEventListener('mousemove', dragging)
-    document.addEventListener('mouseup', dragStop)
     // carousel.addEventListener('scroll', infiniteScroll)
     // wrapper.addEventListener('mouseenter', ()=> clearTimeout(timeoutID))
     // wrapper.addEventListener('mouseleave', autoPlay)
+  
+    carousel.addEventListener('mousedown', dragStart)
+    carousel.addEventListener('mousemove', dragging)
+    document.addEventListener('mouseup', dragStop)
 
 }
 
@@ -208,10 +202,11 @@ function CreateElements(array){
 }
 
 function ScrollBox() {
-    useEffect(() => {
-      // startLogicScroll();
-      setTimeout(()=>{startLogicScroll()}, 10)
-    }, []);
+    // useEffect(() => {
+    //   setTimeout(()=>{startLogicScroll()}, 10)
+    // }, []);
+
+    useEffect((startLogicScroll),[])
 
     return <CreateElements array={scrollContent}></CreateElements>;
   }

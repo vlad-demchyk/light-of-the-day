@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../components/OurTeam.css";
 
 const teamList = [
@@ -37,63 +37,94 @@ const teamList = [
     description:
       "Her expertise lies in crafting minimalist spaces where each carefully considered detail not only contributes to the overall aesthetic appeal but also serves a vital functional purpose, resulting in environments that are both visually striking and efficiently designed.",
   },
-  
 ];
 
-function CreateDom() {
-  
-  const [focusedIndex, setFocusedIndex] = useState(0); // За замовчуванням фокус на першій картці
-  const [clickedIndex, setClickedIndex] = useState(0); // Відслідковує останню клікнуту картку
+function wheelScrollEffect(ref) {
+  if (!ref.current) return; // перевірка на наявність
 
-   // Встановлюємо фокус на першу картку при завантаженні сторінки
-   useEffect(() => {
+  const cardWrapper = ref.current; // дом-елемент
+
+ const handleWheelScroll = (e) => { // функція при взаємодіі на дом-елементі
+
+  const scrollLimitMax  = cardWrapper.scrollWidth - cardWrapper.clientWidth
+  const scrollPositionNum = Math.ceil(cardWrapper.scrollLeft)
+  const atLeftEdge = scrollPositionNum === 0; //умова чи досягнуто край лівий
+  const atRightEdge = scrollPositionNum + cardWrapper.clientWidth >= cardWrapper.scrollWidth;//умова чи досягнуто край правий
+
+  if ((atLeftEdge && e.deltaY < 0) || (atRightEdge && e.deltaY > 0)) {
+    return;
+  }
+  /*} else if (scrollPositionNum === scrollLimitMax && e.deltaY > 0){
+  //   console.log('Ти на межі скролу')
+  //   return; // вихід зі скролу на мобільній версіЇ
+   } else if (cardWrapper.scrollLeft >= cardWrapper.scrollWidth - cardWrapper.clientWidth){} */
+
+    e.preventDefault();
+    cardWrapper.scrollLeft += (e.deltaY*0.3); // Використовуємо deltaY для горизонтальної прокрутки
+    cardWrapper.scrollLeft += (e.deltaX*0.3); // Використовуємо deltaY для горизонтальної прокрутки
+};
+
+cardWrapper.addEventListener("wheel", handleWheelScroll);
+
+// Прибираємо слухача події при розмонтуванні компонента
+return () => cardWrapper.removeEventListener("wheel", handleWheelScroll);
+}
+
+function CreateWrapper() {
+  const cardWrapperRef = useRef(null);
+  const [focusedIndex, setFocusedIndex] = useState(0); // За замовчуванням фокус на першій картці
+  // const [clickedIndex, setClickedIndex] = useState(0); // Відслідковує останню клікнуту картку
+
+  // Встановлюємо фокус на першу картку при завантаженні сторінки
+  useEffect(() => {
     setFocusedIndex(0); // При завантаженні першій картці присвоюється фокус
   }, []);
 
+  useEffect(() => {
+    wheelScrollEffect(cardWrapperRef); // Додаємо ефект скролінгу
+  }, []);
 
-    // Функції для обробки входу та виходу мишки з враппера
-    function handleMouseEnter() {
-      // При вході у враппер нічого не змінюємо, картка залишається активною
-      setFocusedIndex(clickedIndex); // Встановлюємо фокус на останній клікнутий індекс
-    }
-  
-    function handleMouseLeave() {
-      // При виході з враппера фокус залишається на останній активній картці
-      setFocusedIndex(clickedIndex); // Оновлюємо стан фокусу на останню клікнуту картку
-    }
+  /* function handleMouseEnter() {
+  //   setFocusedIndex(clickedIndex);
+  // }
 
-      // Функція для обробки кліку на картку
+  // function handleMouseLeave() {
+  //   setFocusedIndex(clickedIndex);
+  } */
+
   function handleCardClick(index) {
-    setFocusedIndex(index); // Встановлюємо фокус на клікнуту картку
-    setClickedIndex(index); // Зберігаємо індекс клікнутої картки для подальшого використання
+    setFocusedIndex(index);
+    // setClickedIndex(index);
   }
 
   return (
-    <section 
-    className="team-wrapper">
-      <div 
-      className="team-list"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <section className="team-wrapper">
+      <div
+        ref={cardWrapperRef}
+        className="team-list"
+        // onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
       >
         {teamList.map((person, index) => {
-          const { name, url, profession, description } = person;
+          const { name, url, description } = person;
           return (
-            <div 
-            key={index} 
-            tabIndex="0" 
-            className={`card-item-team ${focusedIndex === index ? 'focused' : ''}`}
-            onClick={() => handleCardClick(index)}
+            <div
+              key={index}
+              tabIndex="0"
+              className={`card-item-team ${
+                focusedIndex === index ? "focused" : ""
+              }`}
+              onClick={() => handleCardClick(index)}
             >
-              <div className='card-text'>
-              <div className="name">
-                <span>{`${index + 1}/${teamList.length}`}</span>
-                <p>{name.toLocaleUpperCase()}</p>
-              </div>
-              <p className="description-text">{description}</p>
+              <div className="card-text">
+                <div className="name">
+                  <span>{`${index + 1}/${teamList.length}`}</span>
+                  <p>{name.toLocaleUpperCase()}</p>
+                </div>
+                <p className="description-text">{description}</p>
               </div>
               <div className="image-person">
-              <img src={`${url}`} alt={name} />
+                <img src={`${url}`} alt={name} />
               </div>
             </div>
           );
@@ -103,36 +134,15 @@ function CreateDom() {
   );
 }
 
-// function startLogicOurTeam(){
-
-//   // const cardWrapper = document.querySelector('.team-list');
-//   const cards = document.querySelector('.card-item-team'); // Беремо одну картку для вимірювання
-//   // const cardWidth = cards[Math.floor(cards.length/2)].offsetWidth;
-
-//   // Math.floor(cards.length/2).focus()
-  
-//   // // Кількість карток (5 карток)
-//   // const numberOfCards = cards.length;
-  
-//   // // Повна ширина з урахуванням відступів
-//   // const totalContentWidth = numberOfCards * (cardWidth); // Остання картка без відступу після себе
-  
-//   // // Прокручуємо обгортку на половину цієї ширини
-//   // cardWrapper.scrollLeft = totalContentWidth / 2 + cardWidth;
-
-//   cards.focus();
-// }
-
 function OurTeam() {
-  // useEffect(() => {
-  //   setTimeout(()=>{startLogicOurTeam()}, 10)
-  // }, []);
-
   return (
     <div className="carousel-container">
-         <img className="scale" src={`${process.env.PUBLIC_URL}/image/our_team/scale.png`} />
+      <img alt="#"
+        className="stairs"
+        src={`${process.env.PUBLIC_URL}/image/our_team/stairs.png`}
+      />
       <h3>{"Meet Our Experts".toUpperCase()}</h3>
-      <CreateDom></CreateDom>
+      <CreateWrapper></CreateWrapper>
     </div>
   );
 }

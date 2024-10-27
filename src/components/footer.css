@@ -62,6 +62,13 @@
     background-color: transparent;
     border: 1px solid white;
 }
+.form_footer button:hover{
+    background-color:#F44C06;
+    border: none;
+}
+.form_footer button:active{
+    background-color:#ad3603;
+}
 .form_footer{
     display: grid;
     grid-template-columns: 65% 1fr;
@@ -80,35 +87,61 @@ a{
     flex-direction: column;
     gap: 20px;
     bottom: 5%;
-    width: 250px;
+}
+.mail-footer::before{
+    content: 'Email:';
 }
 
+.phone-footer::before{
+    content: 'Phone:';
+}
 
 
 
 .social_links{
     display: flex; /* Виставляємо елементи в лінію */
+    flex-direction: row;
+    gap: 5px;
+    width: min-content;
     justify-content: space-between; /* Розподіляємо елементи по горизонталі */
 }
 
 .social_links img {
-    height: 50px;
+    height: 35px;
 }
 
 .text_for_submit, .text_for_submit span{
     font-size: 16px;
-    /* font-size: 1vw; */
     font-weight: 500;
 }
 
-.privacy_policy{
-display: flex;
-width: max-content;
-gap: 50px;
-position: relative;
-justify-content: space-between;
+.footer-links > *{
+    color: white;
+    font-weight: 100;
+    width: max-content;
+    font-size: 1vw;
+    opacity: 0.5;
+
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5%;
+    width: 60vw;
+    justify-content: space-between;
+    right: 5%;
 }
 
+ .privacy_policy{
+display: flex;
+width: max-content;
+gap: 20px;
+position: relative;
+/* justify-content: space-between; */
+/* bottom: 5%;
+left: 25%; */
+} 
 .privacy_policy::after{
     content: '';
     position: absolute;
@@ -116,6 +149,15 @@ justify-content: space-between;
     width: 1px;
     left: 50%;
     background-color: white;
+    }
+
+@media screen and (max-width: 1000px) {
+    .sub_for_footer{
+        width: 60%;
+        bottom: 25%;
+        align-items: flex-end
+
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -133,21 +175,42 @@ justify-content: space-between;
         position: absolute;
         bottom: 40%;
     }
+    .mail-footer::before{
+        content: '';
+    }
+    
+    .phone-footer::before{
+        content: '';
+    }
     
 
     .social_links img{
         margin-top: 5%;
+        height: 45px;
     }
 
 
     .sub_for_footer{
         width: 90%;
-        bottom: 15%;
+        bottom: 25%;
+        align-items: flex-start
+
+
     }
     .form_footer button{
         background-color: #F44C06;
         border: none;
     }
+
+    .footer-links >*{
+font-size: 14px;
+    }
+    .footer-links{
+        display: block;
+        /* opacity: 0.5; */
+        right: auto;
+    }
+
 
     .privacy_policy::after{
         content: none;
@@ -155,7 +218,23 @@ justify-content: space-between;
     }
     
     .privacy_policy{
-        width: 100%;
+        width: 90vw;
         text-decoration: underline;
+        margin-bottom: 10%;
+        justify-content: space-between;
+        font-size: 20px;
+        opacity: 1;
+        /* position: absolute; */
     }
+
+    .authors::before{
+        top: -100%;
+    }
+    .authors{
+        bottom: 5%;
+        right: auto;
+    }
+
+
+
 }

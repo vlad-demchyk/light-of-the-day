@@ -19,7 +19,7 @@
     padding-top: 100px;
 }
 
-.scale{
+.stairs{
     position: absolute;
     top: 5%;
     right: 0;
@@ -27,6 +27,7 @@
     pointer-events: none;
     height: 90%;
 }
+
 
 .team-list{
     margin: 0;
@@ -223,7 +224,7 @@ animation: fadeIn 0.5s ease;
             padding-top: 50px;
         }
 
-        .scale{
+        .stairs{
             top: -20%;
             height: 55%;
         }

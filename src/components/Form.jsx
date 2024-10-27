@@ -31,18 +31,6 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // const isFormEmpty = Object.values(formData).every(
-    //   (field) => field === "" );
-
-    // if(isFormEmpty){
-    //   setFormErrors({
-    //     fName: "",
-    //     lName: "",
-    //     email: "",
-    //     number: "",
-    //     message: "",
-    //   });
-    // }
 
     // Final validation check
     const isFormValid = Object.values(formErrors).every(
@@ -72,18 +60,8 @@ const Form = () => {
     }
   };
 
-
-  
-  // Event handlers for form field changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    const field = e.target
+  const formValidation = (name, value, field) =>{
     const errorClass = 'set_error_field'
-
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
 
     if (name === "fName" && value.length < 3) {
       field.classList.add(errorClass)
@@ -122,6 +100,20 @@ const Form = () => {
         [name]: "", // Reset error message
       }));
     }
+  }
+  
+  // Event handlers for form field changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    const field = e.target
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+     
+    formValidation(name, value, field)
+    
   };
 
   // ...

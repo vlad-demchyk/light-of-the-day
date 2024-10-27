@@ -7,12 +7,15 @@
     
     
     
-    .primary-navigation a{
+    /* .primary-navigation a{ */
+    .text-link-style{
     text-decoration: none;
     color: white;
     font-weight: 100;
+    transition: all 0.2s ease-in-out;
     }
-    .primary-navigation a:hover{
+    /* .primary-navigation a:hover{ */
+        .text-link-style:hover{
         color: #F44C06;
     }
 
@@ -42,17 +45,7 @@
         .primary-navigation[data-visible="true"]{
             transform: translateX(0%);
         }
-        .primary-navigation a:hover{
-            color: white;
-        }
-        .primary-navigation a:active{
-        color: #F44C06;
-        }
+
       }
-      @media screen and (max-width: 480px) {
-        
-        .primary-navigation a{
-            font-size: 3.6vw;
-        }
-      }
+
   

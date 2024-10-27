@@ -2,7 +2,7 @@ import "./MenuComponent.css";
 
 function MenuComponent({state, style, scrollRefs, setMenuOpen}){
 
-  console.log(scrollRefs)
+
 
     const scrollToRef = (ref) => {
         if (ref && ref.current) {
@@ -13,7 +13,7 @@ function MenuComponent({state, style, scrollRefs, setMenuOpen}){
       const handleClick = (event, ref) => {
         event.preventDefault(); // Запобігаємо переходу за посиланням
         scrollToRef(ref);
-        setMenuOpen(false)
+        setMenuOpen?.(false)
       };
 
 

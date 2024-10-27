@@ -108,6 +108,15 @@ textarea {
   resize: none; /* Можливість змінювати висоту */
 }
 
+.form_container form .submit_button:hover {
+    background-color: #f44c06;
+    border: none;
+}
+.form_container form .submit_button:active {
+    background-color: #ad3603;
+    border: none;
+}
+
 .form_container form .submit_button {
   border: 1px solid rgba(255, 255, 255, 0.485);
   color: white;
